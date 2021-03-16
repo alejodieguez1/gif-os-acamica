@@ -12,22 +12,49 @@ html {
             height: 5px;
         }
         .navigation-container {
-            padding: 10px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            .gifos-logo {
+                width: 3.05rem;
+                height: 3.05rem;
+            }
             .hmb-menu {
                 display: none;
             }
             .hmb.label {
+                float: right;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
                 .bar {
-                    height: 5px;
-                    width: 10px;
-                    background-color: black;
+                    margin: 1px;
+                    height: 2px;
+                    width: 19px;
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 5px;
                 }
             }
             .nav-names {
-                display: none;
+                width: 100%;
+                max-height: 100%;
+                transition: max-height 0.2s ease;
+                overflow: hidden;
+                background-color: #562ee5ec;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                .names {
+                    list-style: none;
+                    overflow: hidden;
+                    a {
+                        text-decoration: none;
+                        color: #ffff;
+                    }
+                }
+                .line {
+                    background-color: #ffff;
+                    width: 41px;
+                    height: 0.1px;
+                }
             }
             .create-container {
                 display: none;
