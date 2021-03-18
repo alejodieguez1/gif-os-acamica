@@ -5,7 +5,7 @@ html {
   font-family: 'Roboto', sans-serif; }
 
 .body-container .header-container .top-bar {
-  background-color: blueviolet;
+  background-color: #572EE5;
   width: 100%;
   height: 5px; }
 .body-container .header-container .navigation-container .gifos-logo {
@@ -14,15 +14,13 @@ html {
 .body-container .header-container .navigation-container .hmb-menu {
   display: none; }
 .body-container .header-container .navigation-container .hmb.label {
-  float: right;
   cursor: pointer;
   display: flex;
   flex-direction: column; }
   .body-container .header-container .navigation-container .hmb.label .bar {
-    margin: 1px;
     height: 2px;
     width: 19px;
-    background-color: black;
+    background-color: #000;
     border-radius: 5px; }
 .body-container .header-container .navigation-container .nav-names {
   width: 100%;
@@ -38,6 +36,7 @@ html {
     list-style: none;
     overflow: hidden; }
     .body-container .header-container .navigation-container .nav-names .names a {
+      font-family: 'Montserrat', sans-serif;
       text-decoration: none;
       color: #ffff; }
   .body-container .header-container .navigation-container .nav-names .line {
