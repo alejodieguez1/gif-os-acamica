@@ -13,33 +13,38 @@ html {
         }
         .navigation-container {
             .gifos-logo {
+                transform: translate(10px, 0px);
+                margin: 22px;
                 width: 3.05rem;
                 height: 3.05rem;
             }
             .hmb-menu {
                 display: none;
             }
-            .hmb.label {
+            .hmb-label {
+                margin: 26px;
+                float: right;
                 cursor: pointer;
                 display: flex;
                 flex-direction: column;
                 .bar {
+                    margin: 2px;
                     height: 2px;
                     width: 19px;
-                    background-color: #000;
+                    background-color: #572EE5;
                     border-radius: 5px;
                 }
             }
             .nav-names {
                 width: 100%;
-                max-height: 100%;
+                position: absolute;
+                max-height: 0;
                 transition: max-height 0.2s ease;
                 overflow: hidden;
                 background-color: #562ee5ec;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-content: center;
+                z-index: 10px;
                 .names {
                     list-style: none;
                     overflow: hidden;
@@ -57,6 +62,25 @@ html {
             }
             .create-container {
                 display: none;
+            }
+            /*  NAV MENU ANIMATIONS  */
+            #hmb-menu:checked ~ .nav-names {
+                max-height: 100%;
+            }
+            #hmb-menu:checked ~ .hmb-label #bar1 {
+                transform: translate(0, 6.2px) rotate(45deg);
+                transition: 0.2s ease-out;
+                width: 20px;
+            }
+            #hmb-menu:checked ~ .hmb-label #bar2 {
+                opacity: 0;
+                transform: translate(-10px);
+                transition: 0.2s;
+            }
+            #hmb-menu:checked ~ .hmb-label #bar3 {
+                transform: translate(0, -6.2px) rotate(-45deg);
+                transition: 0.2s ease-out;
+                width: 20px;
             }
         }
     }
