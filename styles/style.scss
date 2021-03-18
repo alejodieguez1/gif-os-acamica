@@ -13,7 +13,6 @@ html {
         }
         .navigation-container {
             .gifos-logo {
-                transform: translate(10px, 0px);
                 margin: 22px;
                 width: 3.05rem;
                 height: 3.05rem;
@@ -50,14 +49,15 @@ html {
                     overflow: hidden;
                     a {
                         font-family: 'Montserrat', sans-serif;
+                        font-weight: 800;
                         text-decoration: none;
                         color: #ffff;
                     }
                 }
                 .line {
-                    background-color: #ffff;
+                    opacity: 0.5;
+                    border: 1px solid #FFFFFF;
                     width: 41px;
-                    height: 0.1px;
                 }
             }
             .create-container {

@@ -11,7 +11,6 @@ html {
 .body-container .header-container .navigation-container {
   /*  NAV MENU ANIMATIONS  */ }
   .body-container .header-container .navigation-container .gifos-logo {
-    transform: translate(10px, 0px);
     margin: 22px;
     width: 3.05rem;
     height: 3.05rem; }
@@ -44,12 +43,13 @@ html {
       overflow: hidden; }
       .body-container .header-container .navigation-container .nav-names .names a {
         font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
         text-decoration: none;
         color: #ffff; }
     .body-container .header-container .navigation-container .nav-names .line {
-      background-color: #ffff;
-      width: 41px;
-      height: 0.1px; }
+      opacity: 0.5;
+      border: 1px solid #FFFFFF;
+      width: 41px; }
   .body-container .header-container .navigation-container .create-container {
     display: none; }
   .body-container .header-container .navigation-container #hmb-menu:checked ~ .nav-names {
