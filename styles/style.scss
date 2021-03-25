@@ -88,7 +88,7 @@ html {
             }
         }
     }
-    /* Search section */
+    /* Search + Trending text section */
     .search-section {
         .search-container {
             display: flex;
@@ -106,19 +106,35 @@ html {
                     color: #5ED7C6;
                 }
             }
-            .searchBox-container {
+            .illustration-container {
+                width: 273px;
+                height: 130px;
                 .header-illustration {
                     margin-left: 55px;
                     width: 273px;
                     height: 130px;
                 }
+            }
+            .searchBox-container {
                 .search-box {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 400;
                     margin-left: 35px;
                     border-radius: 27px;
                     padding: 15px 64px 13px 55px;
-                    border: 2px solid #572EE5;
+                    border: 1px solid #572EE5;
+                }
+                .search-btn {
+                    cursor: pointer;
+                    border: none;
+                    position: absolute;
+                    background-color: #5ed7c700;
+                    right: 41px;
+                    bottom: 57.4%;
+                }
+                .search-btn:hover {
+                    transform: scale(1.1);
+                    transition: 0.3s;
                 }
             }
         }

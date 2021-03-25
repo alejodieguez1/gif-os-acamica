@@ -6,7 +6,7 @@ html {
 
 .body-container {
   /* Header section */
-  /* Search section */ }
+  /* Search + Trending text section */ }
   .body-container .header-container .top-bar {
     background-color: #572EE5;
     width: 100%;
@@ -86,16 +86,29 @@ html {
       .body-container .search-section .search-container .first-tittle .gifos-span {
         font-weight: 800;
         color: #5ED7C6; }
-    .body-container .search-section .search-container .searchBox-container .header-illustration {
-      margin-left: 55px;
+    .body-container .search-section .search-container .illustration-container {
       width: 273px;
       height: 130px; }
+      .body-container .search-section .search-container .illustration-container .header-illustration {
+        margin-left: 55px;
+        width: 273px;
+        height: 130px; }
     .body-container .search-section .search-container .searchBox-container .search-box {
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       margin-left: 35px;
       border-radius: 27px;
       padding: 15px 64px 13px 55px;
-      border: 2px solid #572EE5; }
+      border: 1px solid #572EE5; }
+    .body-container .search-section .search-container .searchBox-container .search-btn {
+      cursor: pointer;
+      border: none;
+      position: absolute;
+      background-color: #5ed7c700;
+      right: 41px;
+      bottom: 57.4%; }
+    .body-container .search-section .search-container .searchBox-container .search-btn:hover {
+      transform: scale(1.1);
+      transition: 0.3s; }
 
 /*# sourceMappingURL=main.css.map */
