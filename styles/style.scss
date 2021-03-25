@@ -5,6 +5,7 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 .body-container {
+    /* Header section */
     .header-container {
         .top-bar {
             background-color: #572EE5;
@@ -12,6 +13,7 @@ html {
             height: 5px;
         }
         .navigation-container {
+            padding: 22px 0px 0px;
             .gifos-logo {
                 margin: 22px;
                 width: 3.05rem;
@@ -20,8 +22,10 @@ html {
             .hmb-menu {
                 display: none;
             }
+            /* Hamburguer menu three bars */
             .hmb-label {
-                margin: 26px;
+                padding-top: 19px;
+                padding-right: 26px;
                 float: right;
                 cursor: pointer;
                 display: flex;
@@ -63,7 +67,7 @@ html {
             .create-container {
                 display: none;
             }
-            /*  NAV MENU ANIMATIONS  */
+            /*  Hamburguer menu animations  */
             #hmb-menu:checked ~ .nav-names {
                 max-height: 100%;
             }
@@ -81,6 +85,41 @@ html {
                 transform: translate(0, -6.2px) rotate(-45deg);
                 transition: 0.2s ease-out;
                 width: 20px;
+            }
+        }
+    }
+    /* Search section */
+    .search-section {
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            .first-tittle {
+                align-self: center;
+                margin-bottom: 31px;
+                font-weight: 800;
+                color: #572EE5;
+                font-size: 1.5626rem;
+                text-align: center;
+                width: 70%;
+                .gifos-span {
+                    font-weight: 800;
+                    color: #5ED7C6;
+                }
+            }
+            .searchBox-container {
+                .header-illustration {
+                    margin-left: 55px;
+                    width: 273px;
+                    height: 130px;
+                }
+                .search-box {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    margin-left: 35px;
+                    border-radius: 27px;
+                    padding: 15px 64px 13px 55px;
+                    border: 2px solid #572EE5;
+                }
             }
         }
     }

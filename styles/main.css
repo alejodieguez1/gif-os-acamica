@@ -4,67 +4,98 @@ html {
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif; }
 
-.body-container .header-container .top-bar {
-  background-color: #572EE5;
-  width: 100%;
-  height: 5px; }
-.body-container .header-container .navigation-container {
-  /*  NAV MENU ANIMATIONS  */ }
-  .body-container .header-container .navigation-container .gifos-logo {
-    margin: 22px;
-    width: 3.05rem;
-    height: 3.05rem; }
-  .body-container .header-container .navigation-container .hmb-menu {
-    display: none; }
-  .body-container .header-container .navigation-container .hmb-label {
-    margin: 26px;
-    float: right;
-    cursor: pointer;
+.body-container {
+  /* Header section */
+  /* Search section */ }
+  .body-container .header-container .top-bar {
+    background-color: #572EE5;
+    width: 100%;
+    height: 5px; }
+  .body-container .header-container .navigation-container {
+    padding: 22px 0px 0px;
+    /* Hamburguer menu three bars */
+    /*  Hamburguer menu animations  */ }
+    .body-container .header-container .navigation-container .gifos-logo {
+      margin: 22px;
+      width: 3.05rem;
+      height: 3.05rem; }
+    .body-container .header-container .navigation-container .hmb-menu {
+      display: none; }
+    .body-container .header-container .navigation-container .hmb-label {
+      padding-top: 19px;
+      padding-right: 26px;
+      float: right;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column; }
+      .body-container .header-container .navigation-container .hmb-label .bar {
+        margin: 2px;
+        height: 2px;
+        width: 19px;
+        background-color: #572EE5;
+        border-radius: 5px; }
+    .body-container .header-container .navigation-container .nav-names {
+      width: 100%;
+      position: absolute;
+      max-height: 0;
+      transition: max-height 0.2s ease;
+      overflow: hidden;
+      background-color: #562ee5ec;
+      display: flex;
+      flex-direction: column;
+      z-index: 10px; }
+      .body-container .header-container .navigation-container .nav-names .names {
+        list-style: none;
+        overflow: hidden; }
+        .body-container .header-container .navigation-container .nav-names .names a {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 800;
+          text-decoration: none;
+          color: #ffff; }
+      .body-container .header-container .navigation-container .nav-names .line {
+        opacity: 0.5;
+        border: 1px solid #FFFFFF;
+        width: 41px; }
+    .body-container .header-container .navigation-container .create-container {
+      display: none; }
+    .body-container .header-container .navigation-container #hmb-menu:checked ~ .nav-names {
+      max-height: 100%; }
+    .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar1 {
+      transform: translate(0, 6.2px) rotate(45deg);
+      transition: 0.2s ease-out;
+      width: 20px; }
+    .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar2 {
+      opacity: 0;
+      transform: translate(-10px);
+      transition: 0.2s; }
+    .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar3 {
+      transform: translate(0, -6.2px) rotate(-45deg);
+      transition: 0.2s ease-out;
+      width: 20px; }
+  .body-container .search-section .search-container {
     display: flex;
     flex-direction: column; }
-    .body-container .header-container .navigation-container .hmb-label .bar {
-      margin: 2px;
-      height: 2px;
-      width: 19px;
-      background-color: #572EE5;
-      border-radius: 5px; }
-  .body-container .header-container .navigation-container .nav-names {
-    width: 100%;
-    position: absolute;
-    max-height: 0;
-    transition: max-height 0.2s ease;
-    overflow: hidden;
-    background-color: #562ee5ec;
-    display: flex;
-    flex-direction: column;
-    z-index: 10px; }
-    .body-container .header-container .navigation-container .nav-names .names {
-      list-style: none;
-      overflow: hidden; }
-      .body-container .header-container .navigation-container .nav-names .names a {
-        font-family: 'Montserrat', sans-serif;
+    .body-container .search-section .search-container .first-tittle {
+      align-self: center;
+      margin-bottom: 31px;
+      font-weight: 800;
+      color: #572EE5;
+      font-size: 1.5626rem;
+      text-align: center;
+      width: 70%; }
+      .body-container .search-section .search-container .first-tittle .gifos-span {
         font-weight: 800;
-        text-decoration: none;
-        color: #ffff; }
-    .body-container .header-container .navigation-container .nav-names .line {
-      opacity: 0.5;
-      border: 1px solid #FFFFFF;
-      width: 41px; }
-  .body-container .header-container .navigation-container .create-container {
-    display: none; }
-  .body-container .header-container .navigation-container #hmb-menu:checked ~ .nav-names {
-    max-height: 100%; }
-  .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar1 {
-    transform: translate(0, 6.2px) rotate(45deg);
-    transition: 0.2s ease-out;
-    width: 20px; }
-  .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar2 {
-    opacity: 0;
-    transform: translate(-10px);
-    transition: 0.2s; }
-  .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar3 {
-    transform: translate(0, -6.2px) rotate(-45deg);
-    transition: 0.2s ease-out;
-    width: 20px; }
+        color: #5ED7C6; }
+    .body-container .search-section .search-container .searchBox-container .header-illustration {
+      margin-left: 55px;
+      width: 273px;
+      height: 130px; }
+    .body-container .search-section .search-container .searchBox-container .search-box {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin-left: 35px;
+      border-radius: 27px;
+      padding: 15px 64px 13px 55px;
+      border: 2px solid #572EE5; }
 
 /*# sourceMappingURL=main.css.map */
