@@ -93,9 +93,10 @@ html {
         .search-container {
             display: flex;
             flex-direction: column;
-            .first-tittle {
+            /* Main tittle */
+            .first-title {
                 align-self: center;
-                margin-bottom: 31px;
+                margin-bottom: 1.9375rem;
                 font-weight: 800;
                 color: #572EE5;
                 font-size: 1.5626rem;
@@ -106,21 +107,23 @@ html {
                     color: #5ED7C6;
                 }
             }
+            /* Illustration */
             .illustration-container {
                 width: 273px;
                 height: 130px;
                 .header-illustration {
-                    margin-left: 55px;
+                    margin-left: 3.4375rem;
                     width: 273px;
                     height: 130px;
                 }
             }
+            /* Search box */
             .searchBox-container {
                 .search-box {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 400;
-                    margin-left: 35px;
-                    border-radius: 27px;
+                    margin-left: 2.1875rem;
+                    border-radius: 1.68rem;
                     padding: 15px 64px 13px 55px;
                     border: 1px solid #572EE5;
                 }
@@ -129,7 +132,7 @@ html {
                     border: none;
                     position: absolute;
                     background-color: #5ed7c700;
-                    right: 41px;
+                    right: 2.56rem;
                     bottom: 57.4%;
                 }
                 .search-btn:hover {
@@ -137,6 +140,47 @@ html {
                     transition: 0.3s;
                 }
             }
+            /* Trending Text */
+            .trending-text {
+                display: flex;
+                flex-direction: column;
+                h2 {
+                    text-align: center;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    font-family: 'Montserrat', sans-serif;
+                    color: #572EE5;
+                }
+                p {
+                    align-self: center;
+                    width: 60%;
+                    text-align: center;
+                    font-size: 0.875rem;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    color: #572EE5;
+                }
+            }
         }
     }
+    .trendingGif-section {
+        width: 100%;
+        height: 430px;
+        background-color: #F3F5F8;
+        padding-top: 35px;
+        .trendingGif-container {
+            h2 {
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                color: #572EE5;
+                font-size: 1.25rem;
+            }
+            p {
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+            }
+        }
+    } 
 }
