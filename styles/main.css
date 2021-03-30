@@ -146,5 +146,27 @@ html {
       text-align: center;
       font-family: 'Roboto', sans-serif;
       font-weight: 400; }
+  .body-container .footer-section .footer-container {
+    display: flex;
+    flex-direction: column; }
+    .body-container .footer-section .footer-container .share-container {
+      align-self: center;
+      text-align: center; }
+      .body-container .footer-section .footer-container .share-container p {
+        font-size: 0.9375rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400; }
+      .body-container .footer-section .footer-container .share-container .share-icons {
+        color: #CDD6E0; }
+    .body-container .footer-section .footer-container .copyright {
+      text-align: center; }
+      .body-container .footer-section .footer-container .copyright p {
+        font-size: 0.875rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400; }
+    .body-container .footer-section .footer-container .top-bar {
+      background-color: #572EE5;
+      width: 100%;
+      height: 5px; }
 
 /*# sourceMappingURL=main.css.map */
