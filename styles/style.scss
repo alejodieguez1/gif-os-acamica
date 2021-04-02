@@ -42,12 +42,10 @@ html {
                 width: 100%;
                 position: absolute;
                 max-height: 0;
-                transition: max-height 0.2s ease;
-                overflow: hidden;
+                transition: 0.2s ease;
                 background-color: #562ee5ec;
-                display: flex;
-                flex-direction: column;
                 z-index: 10px;
+                overflow: hidden;
                 .names {
                     list-style: none;
                     overflow: hidden;

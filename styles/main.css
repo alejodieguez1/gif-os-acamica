@@ -38,12 +38,10 @@ html {
       width: 100%;
       position: absolute;
       max-height: 0;
-      transition: max-height 0.2s ease;
-      overflow: hidden;
+      transition: 0.2s ease;
       background-color: #562ee5ec;
-      display: flex;
-      flex-direction: column;
-      z-index: 10px; }
+      z-index: 10px;
+      overflow: hidden; }
       .body-container .header-container .navigation-container .nav-names .names {
         list-style: none;
         overflow: hidden; }
