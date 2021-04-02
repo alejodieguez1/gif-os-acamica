@@ -137,12 +137,14 @@ html {
     background-color: #F3F5F8;
     padding-top: 35px; }
     .body-container .trendingGif-section .trendingGif-container h2 {
+      font-size: 1.25rem;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       color: #572EE5;
       font-size: 1.25rem; }
     .body-container .trendingGif-section .trendingGif-container p {
+      font-size: 1rem;
       text-align: center;
       font-family: 'Roboto', sans-serif;
       font-weight: 400; }
@@ -157,8 +159,11 @@ html {
         font-size: 0.9375rem;
         font-family: 'Roboto', sans-serif;
         font-weight: 400; }
-      .body-container .footer-section .footer-container .share-container .share-icons {
+      .body-container .footer-section .footer-container .share-container .share-icons a {
+        text-decoration: none;
         color: #CDD6E0; }
+        .body-container .footer-section .footer-container .share-container .share-icons a i {
+          margin: 10px; }
     .body-container .footer-section .footer-container .copyright {
       text-align: center; }
       .body-container .footer-section .footer-container .copyright p {

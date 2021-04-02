@@ -170,6 +170,7 @@ html {
         padding-top: 35px;
         .trendingGif-container {
             h2 {
+                font-size: 1.25rem;
                 text-align: center;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 700;
@@ -177,6 +178,7 @@ html {
                 font-size: 1.25rem;
             }
             p {
+                font-size: 1rem;
                 text-align: center;
                 font-family: 'Roboto', sans-serif;
                 font-weight: 400;
@@ -197,7 +199,13 @@ html {
                     font-weight: 400;
                 }
                 .share-icons {
-                    color: #CDD6E0;
+                    a {
+                        text-decoration: none;
+                        color: #CDD6E0;
+                        i {
+                            margin: 10px;
+                        }
+                    }
                 }
             }
             .copyright {
