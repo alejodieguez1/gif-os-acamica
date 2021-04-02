@@ -36,28 +36,33 @@ html {
         border-radius: 5px; }
     .body-container .header-container .navigation-container .nav-names {
       width: 100%;
-      position: absolute;
-      max-height: 0;
+      position: fixed;
+      height: 0;
       transition: 0.2s ease;
       background-color: #562ee5ec;
-      z-index: 10px;
-      overflow: hidden; }
+      z-index: 10;
+      overflow: hidden;
+      text-align: center; }
       .body-container .header-container .navigation-container .nav-names .names {
         list-style: none;
-        overflow: hidden; }
+        overflow: hidden;
+        margin-right: 90px;
+        margin-top: 40px; }
         .body-container .header-container .navigation-container .nav-names .names a {
           font-family: 'Montserrat', sans-serif;
           font-weight: 800;
           text-decoration: none;
           color: #ffff; }
-      .body-container .header-container .navigation-container .nav-names .line {
-        opacity: 0.5;
-        border: 1px solid #FFFFFF;
-        width: 41px; }
+      .body-container .header-container .navigation-container .nav-names span {
+        display: inline-block;
+        width: 41px;
+        height: 5.1px;
+        background-color: #0000;
+        opacity: 0.5; }
     .body-container .header-container .navigation-container .create-container {
       display: none; }
     .body-container .header-container .navigation-container #hmb-menu:checked ~ .nav-names {
-      max-height: 100%; }
+      height: 100%; }
     .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar1 {
       transform: translate(0, 6.2px) rotate(45deg);
       transition: 0.2s ease-out;

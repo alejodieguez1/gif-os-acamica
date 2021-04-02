@@ -40,15 +40,18 @@ html {
             }
             .nav-names {
                 width: 100%;
-                position: absolute;
-                max-height: 0;
+                position: fixed;
+                height: 0;
                 transition: 0.2s ease;
                 background-color: #562ee5ec;
-                z-index: 10px;
+                z-index: 10;
                 overflow: hidden;
+                text-align: center;
                 .names {
                     list-style: none;
                     overflow: hidden;
+                    margin-right: 90px;
+                    margin-top: 40px;
                     a {
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 800;
@@ -56,18 +59,20 @@ html {
                         color: #ffff;
                     }
                 }
-                .line {
-                    opacity: 0.5;
-                    border: 1px solid #FFFFFF;
+                span {
+                    display: inline-block;
                     width: 41px;
-                }
+                    height: 5.1px;
+                    background-color: #0000;
+                    opacity: 0.5;
+                }    
             }
             .create-container {
                 display: none;
             }
             /*  Hamburguer menu animations  */
             #hmb-menu:checked ~ .nav-names {
-                max-height: 100%;
+                height: 100%;
             }
             #hmb-menu:checked ~ .hmb-label #bar1 {
                 transform: translate(0, 6.2px) rotate(45deg);
