@@ -42,7 +42,7 @@ html {
                 width: 100%;
                 position: fixed;
                 height: 0;
-                transition: 0.2s ease;
+                transition: 0.3s ease;
                 background-color: #562ee5ec;
                 z-index: 10;
                 overflow: hidden;
@@ -59,12 +59,16 @@ html {
                         color: #ffff;
                     }
                 }
+                .create {
+                    display: none;
+                }
                 span {
-                    display: inline-block;
+                    display: block;
                     width: 41px;
-                    height: 5.1px;
-                    background-color: #0000;
+                    height: 1px;
+                    background: white;
                     opacity: 0.5;
+                    margin: 20px 125px;
                 }    
             }
             .create-container {
@@ -76,7 +80,7 @@ html {
             }
             #hmb-menu:checked ~ .hmb-label #bar1 {
                 transform: translate(0, 6.2px) rotate(45deg);
-                transition: 0.2s ease-out;
+                transition: 0.3s ease-out;
                 width: 20px;
             }
             #hmb-menu:checked ~ .hmb-label #bar2 {
@@ -86,7 +90,7 @@ html {
             }
             #hmb-menu:checked ~ .hmb-label #bar3 {
                 transform: translate(0, -6.2px) rotate(-45deg);
-                transition: 0.2s ease-out;
+                transition: 0.3s ease-out;
                 width: 20px;
             }
         }

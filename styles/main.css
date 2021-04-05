@@ -38,7 +38,7 @@ html {
       width: 100%;
       position: fixed;
       height: 0;
-      transition: 0.2s ease;
+      transition: 0.3s ease;
       background-color: #562ee5ec;
       z-index: 10;
       overflow: hidden;
@@ -53,19 +53,22 @@ html {
           font-weight: 800;
           text-decoration: none;
           color: #ffff; }
+      .body-container .header-container .navigation-container .nav-names .create {
+        display: none; }
       .body-container .header-container .navigation-container .nav-names span {
-        display: inline-block;
+        display: block;
         width: 41px;
-        height: 5.1px;
-        background-color: #0000;
-        opacity: 0.5; }
+        height: 1px;
+        background: white;
+        opacity: 0.5;
+        margin: 20px 125px; }
     .body-container .header-container .navigation-container .create-container {
       display: none; }
     .body-container .header-container .navigation-container #hmb-menu:checked ~ .nav-names {
       height: 100%; }
     .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar1 {
       transform: translate(0, 6.2px) rotate(45deg);
-      transition: 0.2s ease-out;
+      transition: 0.3s ease-out;
       width: 20px; }
     .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar2 {
       opacity: 0;
@@ -73,7 +76,7 @@ html {
       transition: 0.2s; }
     .body-container .header-container .navigation-container #hmb-menu:checked ~ .hmb-label #bar3 {
       transform: translate(0, -6.2px) rotate(-45deg);
-      transition: 0.2s ease-out;
+      transition: 0.3s ease-out;
       width: 20px; }
   .body-container .search-section .search-container {
     display: flex;
