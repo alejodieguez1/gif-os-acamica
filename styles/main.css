@@ -110,6 +110,9 @@ html {
       border-radius: 1.68rem;
       padding: 15px 64px 13px 55px;
       border: 1px solid #572EE5; }
+    .body-container .search-section .search-container .searchBox-container .search-box:hover {
+      transform: scale(1.05);
+      transition: 0.3s; }
     .body-container .search-section .search-container .searchBox-container .search-btn {
       cursor: pointer;
       border: none;

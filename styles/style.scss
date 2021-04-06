@@ -134,6 +134,10 @@ html {
                     padding: 15px 64px 13px 55px;
                     border: 1px solid #572EE5;
                 }
+                .search-box:hover {
+                    transform: scale(1.05);
+                    transition: 0.3s;
+                }
                 .search-btn {
                     cursor: pointer;
                     border: none;
