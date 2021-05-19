@@ -71,6 +71,7 @@ html {
                     margin: 20px 120px;
                 }    
             }
+        }
             .create-container {
                 display: none;
             }
@@ -235,4 +236,17 @@ html {
             height: 5px;
         }
     } 
+
+/*  Dark mode classes  */
+.dark-mode-back {
+    background-color: #37383C;
+}
+.dark-mode-font {
+    color: #ffff;
+}
+.dark-mode-backTwo {
+    background-color: #222326;
+}
+.dark-mode {
+    background-color: black;
 }
