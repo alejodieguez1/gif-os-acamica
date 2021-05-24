@@ -39,8 +39,8 @@ html {
                 }
             }
             .nav-names {
-                width: 100%;
                 position: fixed;
+                width: 100%;
                 height: 0;
                 transition: 0.3s ease;
                 background-color: #562ee5ec;
@@ -72,9 +72,6 @@ html {
                 }    
             }
         }
-            .create-container {
-                display: none;
-            }
             /*  Hamburguer menu animations  */
             #hmb-menu:checked ~ .nav-names {
                 height: 100%;
@@ -181,7 +178,7 @@ html {
         background-color: #F3F5F8;
         padding-top: 35px;
         .trendingGif-container {
-            h2 {
+                h2 {
                 font-size: 1.25rem;
                 text-align: center;
                 font-family: 'Montserrat', sans-serif;
@@ -249,4 +246,32 @@ html {
 }
 .dark-mode {
     background-color: black;
+}
+@media (min-width: 768px) {
+    .body-container {
+        .header-container {
+            .navigation-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .hmb-label {
+                    display: none;
+                }
+                .nav-names {
+                    display: flex;
+                    flex-direction: row;
+                    max-height: 300px;
+                    background: #ffff;
+                    .create {
+                        display: inline-block;
+                    }
+                    .names {
+                        a {
+                            color: #572EE5;
+                        }
+                    }
+                }
+            }
+        }
+    }    
 }
