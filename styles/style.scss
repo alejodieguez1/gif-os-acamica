@@ -262,13 +262,13 @@ html {
                     flex-direction: row;
                     max-height: 300px;
                     background: #ffff;
-                    .create {
-                        display: inline-block;
-                    }
                     .names {
                         a {
                             color: #572EE5;
                         }
+                    }
+                    .create {
+                        display: inline-block;
                     }
                 }
             }

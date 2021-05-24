@@ -212,9 +212,9 @@ html {
       flex-direction: row;
       max-height: 300px;
       background: #ffff; }
-      .body-container .header-container .navigation-container .nav-names .create {
-        display: inline-block; }
       .body-container .header-container .navigation-container .nav-names .names a {
-        color: #572EE5; } }
+        color: #572EE5; }
+      .body-container .header-container .navigation-container .nav-names .create {
+        display: inline-block; } }
 
 /*# sourceMappingURL=main.css.map */
