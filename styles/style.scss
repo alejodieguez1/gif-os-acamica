@@ -44,7 +44,7 @@ html {
                 height: 0;
                 transition: 0.3s ease;
                 background-color: #562ee5ec;
-                z-index: 10;
+                z-index: 100000;
                 overflow: hidden;
                 text-align: center;
                 .names {
@@ -257,18 +257,35 @@ html {
                 .hmb-label {
                     display: none;
                 }
+                .gifos-logo {
+                    align-self: flex-start;
+                    margin-left: 100px;
+                    width:  3.693rem;
+                    height: 3.693rem;
+                }
                 .nav-names {
+                    align-self: flex-end;
+                    transition: 0s;
+                    position: relative;
                     display: flex;
                     flex-direction: row;
-                    max-height: 300px;
+                    height: 100px;
                     background: #ffff;
                     .names {
+                        margin-top: 20px;
+                        margin-right: 50px;
                         a {
                             color: #572EE5;
+                            font-size: 0.81rem;
                         }
+                    }
+                    span {
+                        display: none;
                     }
                     .create {
                         display: inline-block;
+                        width: 3.375rem;
+                        height: 3.375rem;
                     }
                 }
             }

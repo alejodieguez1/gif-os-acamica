@@ -40,7 +40,7 @@ html {
         height: 0;
         transition: 0.3s ease;
         background-color: #562ee5ec;
-        z-index: 10;
+        z-index: 100000;
         overflow: hidden;
         text-align: center; }
         .body-container .header-container .navigation-container .nav-names .names {
@@ -207,14 +207,30 @@ html {
     justify-content: space-between; }
     .body-container .header-container .navigation-container .hmb-label {
       display: none; }
+    .body-container .header-container .navigation-container .gifos-logo {
+      align-self: flex-start;
+      margin-left: 100px;
+      width: 3.693rem;
+      height: 3.693rem; }
     .body-container .header-container .navigation-container .nav-names {
+      align-self: flex-end;
+      transition: 0s;
+      position: relative;
       display: flex;
       flex-direction: row;
-      max-height: 300px;
+      height: 100px;
       background: #ffff; }
-      .body-container .header-container .navigation-container .nav-names .names a {
-        color: #572EE5; }
+      .body-container .header-container .navigation-container .nav-names .names {
+        margin-top: 20px;
+        margin-right: 50px; }
+        .body-container .header-container .navigation-container .nav-names .names a {
+          color: #572EE5;
+          font-size: 0.81rem; }
+      .body-container .header-container .navigation-container .nav-names span {
+        display: none; }
       .body-container .header-container .navigation-container .nav-names .create {
-        display: inline-block; } }
+        display: inline-block;
+        width: 3.375rem;
+        height: 3.375rem; } }
 
 /*# sourceMappingURL=main.css.map */
