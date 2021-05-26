@@ -7,13 +7,17 @@ html {
 .body-container {
     /* Header section */
     .header-container {
+        width: 100%;
+        background: #ffff;
+        position: fixed;
+        box-shadow: 0 2px 4px 1px rgba(156,175,195,0.55);
         .top-bar {
             background-color: #572EE5;
             width: 100%;
             height: 5px;
         }
         .navigation-container {
-            padding: 22px 0px 0px;
+            padding: 8px 0px 8px;
             .gifos-logo {
                 margin: 22px;
                 width: 3.05rem;
@@ -39,6 +43,7 @@ html {
                 }
             }
             .nav-names {
+                margin: 0 auto;
                 position: fixed;
                 width: 100%;
                 height: 0;
@@ -95,6 +100,7 @@ html {
     }
     /* Search + Trending text section */
     .search-section {
+        padding-top: 100px;
         .search-container {
             display: flex;
             flex-direction: column;
@@ -216,6 +222,10 @@ html {
                             margin: 10px;
                         }
                     }
+                    a:hover {
+                        color: #572EE5;
+                        transition: 0.3s;
+                    }
                 }
             }
             .copyright {
@@ -251,6 +261,8 @@ html {
     .body-container {
         .header-container {
             .navigation-container {
+                padding: 0px;
+                padding-top: 20px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -258,6 +270,8 @@ html {
                     display: none;
                 }
                 .gifos-logo {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
                     margin-left: 100px;
                     width:  3.693rem;
                     height: 3.693rem;
@@ -269,13 +283,18 @@ html {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-end;
-                    height: 100px;
+                    height: 70px;
                     background: #ffff;
                     .names {
                         margin: 20px 50px 0px 0px;
                         a {
                             color: #572EE5;
                             font-size: 0.81rem;
+                        }
+                        a:hover {
+                            border-bottom: 2px solid #5ED7C6;
+                            box-shadow: 0px 2px 1px rgba(156,175,195,0.55);
+                            transition: 0.2s;
                         }
                     }
                     span {
@@ -291,7 +310,7 @@ html {
                         transition: 0.2s;
                         transform: rotate(360deg);
                         border-radius: 40px;
-                        box-shadow: 0px 0px 3px black;
+                        box-shadow: 0px 0px 5px rgba(156,175,195,0.55);
                     }
                 }
             }
