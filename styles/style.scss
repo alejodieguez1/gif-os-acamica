@@ -10,7 +10,6 @@ html {
         width: 100%;
         background: #ffff;
         position: fixed;
-        box-shadow: 0 2px 4px 1px rgba(156,175,195,0.55);
         .top-bar {
             background-color: #572EE5;
             width: 100%;
@@ -106,6 +105,8 @@ html {
             flex-direction: column;
             /* Main tittle */
             .first-title {
+                font-family: 'Montserrat', sans-serif;
+                line-height: 33px;
                 align-self: center;
                 margin-bottom: 1.9375rem;
                 font-weight: 800;
@@ -120,20 +121,20 @@ html {
             }
             /* Illustration */
             .illustration-container {
+                align-self: center;
                 width: 273px;
                 height: 130px;
                 .header-illustration {
-                    margin-left: 3.4375rem;
                     width: 273px;
                     height: 130px;
                 }
             }
             /* Search box */
             .searchBox-container {
+                align-self: center;
                 .search-box {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 400;
-                    margin-left: 2.1875rem;
                     border-radius: 1.68rem;
                     padding: 15px 64px 13px 55px;
                     border: 1px solid #572EE5;
@@ -311,6 +312,30 @@ html {
                         transform: rotate(360deg);
                         border-radius: 40px;
                         box-shadow: 0px 0px 5px rgba(156,175,195,0.55);
+                    }
+                }
+            }
+        }
+        .search-section {
+            .search-container {
+                .first-title {
+                    font-size: 2.1875rem;
+                    line-height: 50px;
+                    width: 59%;
+                }
+                .illustration-container {
+                    align-self: center;
+                    width: 399px;
+                    height: 190px;
+                    .header-illustration {
+                        width: 399px;
+                        height: 190px;
+                    }
+                }
+                .searchBox-container {
+                    align-self: center;
+                    .search-box {
+                        width: 551px;
                     }
                 }
             }
