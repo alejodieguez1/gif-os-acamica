@@ -120,9 +120,6 @@ html {
         border-radius: 1.68rem;
         padding: 15px 64px 13px 55px;
         border: 1px solid #572EE5; }
-      .search-section .search-container .searchBox-container .search-box:hover {
-        transform: scale(1.05);
-        transition: 0.3s; }
       .search-section .search-container .searchBox-container .search-btn {
         cursor: pointer;
         border: none;
@@ -130,9 +127,6 @@ html {
         background-color: #5ed7c700;
         right: 2.56rem;
         bottom: 57.4%; }
-      .search-section .search-container .searchBox-container .search-btn:hover {
-        transform: scale(1.1);
-        transition: 0.3s; }
     .search-section .search-container .trending-text {
       display: flex;
       flex-direction: column; }
@@ -279,12 +273,20 @@ html {
       bottom: 46%;
       right: 11rem; }
   .body-container .footer-section .footer-container {
+    padding: 0px 70px;
     flex-direction: row;
     justify-content: space-between; }
     .body-container .footer-section .footer-container .share-container {
       display: flex;
       flex-direction: row;
       align-content: center;
-      justify-content: center; } }
+      justify-content: center; }
+      .body-container .footer-section .footer-container .share-container p {
+        color: #000; }
+      .body-container .footer-section .footer-container .share-container .share-icons {
+        margin-left: 15px;
+        margin-top: 5px; }
+    .body-container .footer-section .footer-container .copyright {
+      margin-top: 20px; } }
 
 /*# sourceMappingURL=main.css.map */

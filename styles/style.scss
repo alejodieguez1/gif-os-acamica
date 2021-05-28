@@ -140,10 +140,6 @@ html {
                     padding: 15px 64px 13px 55px;
                     border: 1px solid #572EE5;
                 }
-                .search-box:hover {
-                    transform: scale(1.05);
-                    transition: 0.3s;
-                }
                 .search-btn {
                     cursor: pointer;
                     border: none;
@@ -151,10 +147,6 @@ html {
                     background-color: #5ed7c700;
                     right: 2.56rem;
                     bottom: 57.4%;
-                }
-                .search-btn:hover {
-                    transform: scale(1.1);
-                    transition: 0.3s;
                 }
             }
             /* Trending Text */
@@ -349,6 +341,7 @@ html {
         }
         .footer-section {
             .footer-container {
+                padding: 0px 70px;
                 flex-direction: row;
                 justify-content: space-between;
                 .share-container {
@@ -356,6 +349,16 @@ html {
                     flex-direction: row;
                     align-content: center;
                     justify-content: center;
+                    p {
+                        color: #000;
+                    }
+                    .share-icons {
+                        margin-left: 15px;
+                        margin-top: 5px;
+                    }
+                }
+                .copyright {
+                    margin-top: 20px;
                 }
             }
         }
