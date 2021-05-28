@@ -188,6 +188,7 @@ html {
         margin: 10px; }
     .footer-section .footer-container .share-container .share-icons a:hover {
       color: #572EE5;
+      text-shadow: 0px 1.5px 5px #838282;
       transition: 0.3s; }
   .footer-section .footer-container .copyright {
     text-align: center; }
@@ -246,7 +247,7 @@ html {
           border-bottom: 2px solid #5ED7C6;
           box-shadow: 0px 2px 1px rgba(156, 175, 195, 0.55);
           transition: 0.2s;
-          text-shadow: 0px 1.5px 3px rgba(156, 175, 195, 0.55); }
+          text-shadow: 0px 1.5px 3px rgba(122, 122, 122, 0.55); }
       .body-container .header-container .navigation-container .nav-names span {
         display: none; }
       .body-container .header-container .navigation-container .nav-names .create {
@@ -273,6 +274,17 @@ html {
   .body-container .search-section .search-container .searchBox-container {
     align-self: center; }
     .body-container .search-section .search-container .searchBox-container .search-box {
-      width: 551px; } }
+      width: 551px; }
+    .body-container .search-section .search-container .searchBox-container .search-btn {
+      bottom: 46%;
+      right: 11rem; }
+  .body-container .footer-section .footer-container {
+    flex-direction: row;
+    justify-content: space-between; }
+    .body-container .footer-section .footer-container .share-container {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center; } }
 
 /*# sourceMappingURL=main.css.map */

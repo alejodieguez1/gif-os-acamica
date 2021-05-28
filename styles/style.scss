@@ -226,6 +226,7 @@ html {
                     }
                     a:hover {
                         color: #572EE5;
+                        text-shadow: 0px 1.5px 5px rgb(131, 130, 130);
                         transition: 0.3s;
                     }
                 }
@@ -297,7 +298,7 @@ html {
                             border-bottom: 2px solid #5ED7C6;
                             box-shadow: 0px 2px 1px rgba(156,175,195,0.55);
                             transition: 0.2s;
-                            text-shadow: 0px 1.5px 3px rgba(156,175,195,0.55);
+                            text-shadow: 0px 1.5px 3px rgba(122, 122, 122, 0.55);
                         }
                     }
                     span {
@@ -339,6 +340,22 @@ html {
                     .search-box {
                         width: 551px;
                     }
+                    .search-btn {
+                        bottom: 46%;
+                        right: 11rem;
+                    }
+                }
+            }
+        }
+        .footer-section {
+            .footer-container {
+                flex-direction: row;
+                justify-content: space-between;
+                .share-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-content: center;
+                    justify-content: center;
                 }
             }
         }
