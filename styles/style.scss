@@ -130,23 +130,31 @@ html {
                 }
             }
             /* Search box */
-            .searchBox-container {
+            .searchSection-container {
                 align-self: center;
-                .search-box {
-                    color: #9CAFC3;
-                    font-family: 'Roboto', sans-serif;
-                    font-weight: 400;
-                    border-radius: 1.68rem;
-                    padding: 15px 64px 13px 55px;
-                    border: 1px solid #572EE5;
-                }
-                .search-btn {
-                    cursor: pointer;
-                    border: none;
-                    position: absolute;
-                    background-color: #5ed7c700;
-                    right: 2.56rem;
-                    bottom: 53.6%;
+                border-radius: 1.68rem;
+                border: 1px solid #572EE5;
+                width: 334px;
+                height: 50px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .searchBar-container {
+                    display: flex;
+                    .search-box {
+                        color: #6B7989;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 400;
+                        padding: 15px 64px 13px 55px;
+                        outline: none;
+                        border: none;
+                    }
+                    .search-btn {
+                        cursor: pointer;
+                        border: none;
+                        background-color: #5ed7c700;
+                    }
                 }
             }
             /* Trending Text */
@@ -327,14 +335,14 @@ html {
                         height: 190px;
                     }
                 }
-                .searchBox-container {
+                .searchSection-container {
                     align-self: center;
-                    .search-box {
+                    display: flex;
+                    flex-direction: row;
+                    width: 551px;
+                    .searchBar-container {
                         width: 551px;
-                    }
-                    .search-btn {
-                        bottom: 46%;
-                        right: 11rem;
+                        justify-content: space-between;
                     }
                 }
             }
