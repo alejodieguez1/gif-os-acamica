@@ -1,5 +1,6 @@
 var darkMode = document.getElementById("dark-mode");
 var topBar = document.getElementById("top-bar");
+var bodyContainer = document.querySelector("body");
 
 darkMode.addEventListener("click", () => {
     if (darkMode.textContent === 'Modo Nocturno')
@@ -9,4 +10,8 @@ darkMode.addEventListener("click", () => {
     if (darkMode.textContent === "Modo Diurno")
     topBar.classList.replace("top-bar", "darkMode");
     else topBar.classList.replace("darkMode", "top-bar");
+
+    if(darkMode.textContent === "Modo Diurno")
+    bodyContainer.style.backgroundColor = ("#37383C");
+    else bodyContainer.style.backgroundColor = ("white");
 });
