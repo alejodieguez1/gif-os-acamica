@@ -46,7 +46,9 @@ html {
         background-color: #562ee5ec;
         z-index: 100000;
         overflow: hidden;
-        text-align: center; }
+        text-align: center;
+        display: flex;
+        flex-direction: column; }
         .body-container .header-container .navigation-container .nav-names .names {
           list-style: none;
           overflow: hidden;
@@ -65,7 +67,10 @@ html {
           height: 1px;
           background: white;
           opacity: 0.5;
-          margin: 20px 120px; }
+          margin-top: 20px;
+          margin-bottom: 20px;
+          margin-right: 90px;
+          align-self: center; }
     .body-container .header-container #hmb-menu:checked ~ .nav-names {
       height: 100%; }
     .body-container .header-container #hmb-menu:checked ~ .hmb-label #bar1 {

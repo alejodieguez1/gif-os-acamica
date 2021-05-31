@@ -51,6 +51,8 @@ html {
                 z-index: 100000;
                 overflow: hidden;
                 text-align: center;
+                display: flex;
+                flex-direction: column;
                 .names {
                     list-style: none;
                     overflow: hidden;
@@ -72,7 +74,10 @@ html {
                     height: 1px;
                     background: white;
                     opacity: 0.5;
-                    margin: 20px 120px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    margin-right: 90px;
+                    align-self: center;
                 }    
             }
         }
