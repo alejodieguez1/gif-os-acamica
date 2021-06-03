@@ -3,6 +3,8 @@ var topBar = document.getElementById("top-bar");
 var bodyContainer = document.querySelector("body");
 var headerContainer = document.getElementById("header-container");
 var logoText = document.getElementById("GIFOS_1");
+var hmbBar = document.getElementById("hmb-bar");
+var menuOpen = document.querySelector(".nav-names");
 
 darkMode.addEventListener("click", () => {
     if (darkMode.textContent === 'Modo Nocturno')
@@ -15,7 +17,15 @@ darkMode.addEventListener("click", () => {
 
     if (darkMode.textContent === "Modo Diurno")
     logoText.setAttribute("fill", "#ffff");
-    else logoText.setAttribute("fill", "#572EE5")
+    else logoText.setAttribute("fill", "#572EE5");
+
+    if (darkMode.textContent === "Modo Diurno")
+    hmbBar.classList.replace("bar", "barDark");
+    else hmbBar.classList.replace("barDark", "bar");
+
+    if (darkMode.textContent === "Modo Diurno")
+    menuOpen.style.backgroundColor = ("black");
+    else menuOpen.style.backgroundColor = ("#562ee5ec")
 
     if (darkMode.textContent === "Modo Diurno")
     topBar.classList.replace("top-bar", "darkMode");
