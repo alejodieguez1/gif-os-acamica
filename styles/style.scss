@@ -20,6 +20,41 @@
     background-color: #ffff;
     border-radius: 5px;
 }
+.navDark {
+    padding-right: 50px;
+    transition: 0s;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 70px;
+    .names {
+        margin: 20px 50px 0px 0px;
+        a {
+            color: #fff;
+            font-size: 0.81rem;
+        }
+        a:hover {
+            border-bottom: 2px solid #5ED7C6;
+            transition: 0.2s;
+        }
+    }
+    span {
+        display: none;
+    }
+    .create {
+        display: inline-block;
+        width: 3.375rem;
+        height: 3.375rem;
+    }
+    .create:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        transform: rotate(360deg);
+        border-radius: 40px;
+        box-shadow: 0px 0px 5px rgba(156,175,195,0.55);
+    }
+    }
 html {
     font-size: 16px;
     letter-spacing: 0;
@@ -69,7 +104,6 @@ html {
                 width: 100%;
                 height: 0;
                 transition: 0.3s ease;
-                background-color: #562ee5ec;
                 z-index: 100000;
                 overflow: hidden;
                 text-align: center;
@@ -106,6 +140,7 @@ html {
             /*  Hamburguer menu animations  */
             #hmb-menu:checked ~ .nav-names {
                 height: 100%;
+                background-color: #562ee5ec;
             }
             #hmb-menu:checked ~ .hmb-label .bar1 {
                 transform: translate(0, 6.2px) rotate(45deg);
@@ -301,7 +336,6 @@ html {
                     flex-direction: row;
                     justify-content: flex-end;
                     height: 70px;
-                    background: #ffff;
                     .names {
                         margin: 20px 50px 0px 0px;
                         a {

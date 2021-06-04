@@ -24,8 +24,8 @@ darkMode.addEventListener("click", () => {
     else hmbBar.classList.replace("barDark", "bar");
 
     if (darkMode.textContent === "Modo Diurno")
-    menuOpen.style.backgroundColor = ("black");
-    else menuOpen.style.backgroundColor = ("#562ee5ec")
+    menuOpen.classList.replace("nav-names", "navDark");
+    else menuOpen.classList.replace("navDark", "nav-names");
 
     if (darkMode.textContent === "Modo Diurno")
     topBar.classList.replace("top-bar", "darkMode");
