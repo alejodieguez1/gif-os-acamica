@@ -6,7 +6,7 @@ darkMode.addEventListener("click", () => {
     darkMode.textContent = 'Modo Diurno';
     else darkMode.textContent = 'Modo Nocturno';
 
-    if (darkMode.textContent === "Modo Diurno")
-    bodyContainer.classList.replace("body-container","darkMode");
-    else bodyContainer.classList.remove("darkMode", "body-container")
+    // if (darkMode.textContent === "Modo Diurno")
+    // bodyContainer.classList.replace("body-container","darkMode");
+    // else bodyContainer.classList.remove("darkMode", "body-container")
 });
