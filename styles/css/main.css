@@ -574,6 +574,8 @@ html {
       .darkMode .footer-section .footer-container .share-container .share-icons {
         margin-left: 15px;
         margin-top: 5px; }
+        .darkMode .footer-section .footer-container .share-container .share-icons a:hover {
+          color: #ffff; }
     .darkMode .footer-section .footer-container .copyright {
       margin-top: 20px; } }
 
