@@ -53,6 +53,7 @@ html {
                 text-align: center;
                 display: flex;
                 flex-direction: column;
+                background-color: #000000;
                 .names {
                     list-style: none;
                     overflow: hidden;
@@ -83,7 +84,6 @@ html {
             /*  Hamburguer menu animations  */
             #hmb-menu:checked ~ .nav-names {
                 height: 100%;
-                background-color: #000000;
             }
             #hmb-menu:checked ~ .hmb-label .bar1 {
                 transform: translate(0, 6.2px) rotate(45deg);
@@ -253,7 +253,7 @@ html {
         }
 
     @media (min-width: 768px) {
-        .body-container {
+        .darkMode {
             .header-container {
                 .navigation-container {
                     padding: 0px;
@@ -272,6 +272,7 @@ html {
                     height: 3.693rem;
                 }
                 .nav-names {
+                    background-color: rgba(255, 255, 255, 0);
                     padding-right: 50px;
                     transition: 0s;
                     position: relative;
@@ -282,7 +283,7 @@ html {
                     .names {
                         margin: 20px 50px 0px 0px;
                         a {
-                            color: #572EE5;
+                            color: #ffffff;
                             font-size: 0.81rem;
                         }
                         a:hover {
@@ -349,7 +350,7 @@ html {
                     align-content: center;
                     justify-content: center;
                     p {
-                        color: #000;
+                        color: #fff;
                     }
                     .share-icons {
                         margin-left: 15px;

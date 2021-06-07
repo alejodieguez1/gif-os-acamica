@@ -52,6 +52,7 @@ html {
                 text-align: center;
                 display: flex;
                 flex-direction: column;
+                background-color: #562ee5ec;
                 .names {
                     list-style: none;
                     overflow: hidden;
@@ -83,7 +84,6 @@ html {
             /*  Hamburguer menu animations  */
             #hmb-menu:checked ~ .nav-names {
                 height: 100%;
-                background-color: #562ee5ec;
             }
             #hmb-menu:checked ~ .hmb-label .bar1 {
                 transform: translate(0, 6.2px) rotate(45deg);
@@ -272,6 +272,7 @@ html {
                     height: 3.693rem;
                 }
                 .nav-names {
+                    background-color: #ffff;
                     padding-right: 50px;
                     transition: 0s;
                     position: relative;
