@@ -25,3 +25,12 @@ darkMode.addEventListener("click", () => {
         createBtn.src = "/images/CTA-crear-gifo-modo-noc.svg";
     }else createBtn.src = "/images/button-crear-gifo.svg";
 });
+
+createBtn.addEventListener("mouseenter", () => {
+    if(bodyContainer.classList.contains("darkMode"))
+    createBtn.src = "/images/CTA-crear-gifo-hover-modo-noc.svg";
+});
+createBtn.addEventListener("mouseleave", () => {
+    if(bodyContainer.classList.contains("darkMode"))
+    createBtn.src = "/images/CTA-crear-gifo-modo-noc.svg";
+})
