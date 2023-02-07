@@ -207,6 +207,9 @@ html {
     }
   }
   #trending-gifos {
+    .trending-gifos-arrow {
+      display: none;
+    }
     #trending-gifos-container {
       display: flex;
       flex-direction: row;
@@ -361,8 +364,21 @@ html {
       align-items: center;
       justify-content: center;
       .trending-gifos-arrow {
+        display: block;
+        margin: 0rem 1.5rem;
+        border: 1px solid #572ee5;
+        padding: 0.8rem;
+        cursor: pointer;
         i {
-          cursor: pointer;
+          color: #572ee5;
+          font-size: 1.2rem;
+        }
+        &:hover {
+          background-color: #572ee5;
+          transition: 0.5s;
+          i {
+            color: #ffff;
+          }
         }
       }
       #trending-gifos-container {
