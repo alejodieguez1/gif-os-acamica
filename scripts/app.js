@@ -14,6 +14,8 @@ function request(url) {
   });
 }
 
+const gifosContainer = document.querySelector("#trending-gifos-container");
+
 //Gif card creation function
 function createItem(src, container, itemId) {
   const item = document.createElement("div");
@@ -26,11 +28,10 @@ function createItem(src, container, itemId) {
 
 request(urlTrending)
   .then((data) => {
-    const contenedor = document.querySelector("#trending-gifos");
     for (let i = 0; i <= 10; i++) {
       createItem(
         data.data[i].images.downsized.url,
-        contenedor,
+        gifosContainer,
         "gif-container"
       );
     }

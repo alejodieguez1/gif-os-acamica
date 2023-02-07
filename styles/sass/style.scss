@@ -207,18 +207,23 @@ html {
     }
   }
   #trending-gifos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    .gif-container {
-      margin: 1.5rem;
-      img {
-        max-width: 243px;
-        max-height: 187px;
+    .trending-gifos-arrow {
+      display: none;
+    }
+    #trending-gifos-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      .gif-container {
+        margin: 1.5rem;
+        img {
+          max-width: 243px;
+          max-height: 187px;
+        }
       }
     }
   }

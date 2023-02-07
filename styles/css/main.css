@@ -174,7 +174,9 @@ html {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     line-height: 23px; }
-  .trendingGif-section #trending-gifos {
+  .trendingGif-section #trending-gifos .trending-gifos-arrow {
+    display: none; }
+  .trendingGif-section #trending-gifos #trending-gifos-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -182,9 +184,9 @@ html {
     overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; }
-    .trendingGif-section #trending-gifos .gif-container {
+    .trendingGif-section #trending-gifos #trending-gifos-container .gif-container {
       margin: 1.5rem; }
-      .trendingGif-section #trending-gifos .gif-container img {
+      .trendingGif-section #trending-gifos #trending-gifos-container .gif-container img {
         max-width: 243px;
         max-height: 187px; }
 
