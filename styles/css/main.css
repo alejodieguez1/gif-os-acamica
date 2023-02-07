@@ -2,7 +2,7 @@ html {
   font-size: 16px;
   letter-spacing: 0;
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 .body-container {
   /* Header section */ }
@@ -12,7 +12,7 @@ html {
     position: fixed;
     /*  Hamburguer menu animations  */ }
     .body-container .header-container .top-bar {
-      background-color: #572EE5;
+      background-color: #572ee5;
       width: 100%;
       height: 5px; }
     .body-container .header-container .navigation-container {
@@ -35,7 +35,7 @@ html {
           margin: 2px;
           height: 2px;
           width: 19px;
-          background-color: #572EE5;
+          background-color: #572ee5;
           border-radius: 5px; }
       .body-container .header-container .navigation-container .nav-names {
         margin: 0 auto;
@@ -55,7 +55,7 @@ html {
           margin-right: 90px;
           margin-top: 40px; }
           .body-container .header-container .navigation-container .nav-names .names a {
-            font-family: 'Montserrat', sans-serif;
+            font-family: "Montserrat", sans-serif;
             font-weight: 800;
             text-decoration: none;
             color: #ffff; }
@@ -97,18 +97,18 @@ html {
     /* Search box */
     /* Trending Text */ }
     .search-section .search-container .first-title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       line-height: 33px;
       align-self: center;
       margin-bottom: 1.9375rem;
       font-weight: 800;
-      color: #572EE5;
+      color: #572ee5;
       font-size: 1.5626rem;
       text-align: center;
       width: 70%; }
       .search-section .search-container .first-title .gifos-span {
         font-weight: 800;
-        color: #5ED7C6; }
+        color: #5ed7c6; }
     .search-section .search-container .illustration-container {
       align-self: center;
       width: 273px;
@@ -119,7 +119,7 @@ html {
     .search-section .search-container .searchSection-container {
       align-self: center;
       border-radius: 1.68rem;
-      border: 1px solid #572EE5;
+      border: 1px solid #572ee5;
       width: 334px;
       height: 50px;
       overflow: hidden;
@@ -129,8 +129,8 @@ html {
       .search-section .search-container .searchSection-container .searchBar-container {
         display: flex; }
         .search-section .search-container .searchSection-container .searchBar-container .search-box {
-          color: #6B7989;
-          font-family: 'Roboto', sans-serif;
+          color: #6b7989;
+          font-family: "Roboto", sans-serif;
           font-weight: 400;
           padding: 15px 64px 13px 55px;
           outline: none;
@@ -146,35 +146,47 @@ html {
         text-align: center;
         font-size: 1rem;
         font-weight: 700;
-        font-family: 'Montserrat', sans-serif;
-        color: #572EE5; }
+        font-family: "Montserrat", sans-serif;
+        color: #572ee5; }
       .search-section .search-container .trending-text p {
         align-self: center;
         width: 60%;
         text-align: center;
         font-size: 0.875rem;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 500;
-        color: #572EE5; }
+        color: #572ee5; }
 
 .trendingGif-section {
   width: 100%;
-  height: 430px;
-  background-color: #F3F5F8;
+  background-color: #f3f5f8;
   padding-top: 35px; }
   .trendingGif-section .trendingGif-container h2 {
     font-size: 1.25rem;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    color: #572EE5;
+    color: #572ee5;
     font-size: 1.25rem; }
   .trendingGif-section .trendingGif-container p {
     font-size: 1rem;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     line-height: 23px; }
+  .trendingGif-section #trending-gifos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; }
+    .trendingGif-section #trending-gifos .gif-container {
+      margin: 1.5rem; }
+      .trendingGif-section #trending-gifos .gif-container img {
+        max-width: 243px;
+        max-height: 187px; }
 
 .footer-section .footer-container {
   display: flex;
@@ -185,25 +197,26 @@ html {
     text-align: center; }
     .footer-section .footer-container .share-container p {
       font-size: 0.9375rem;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 400; }
     .footer-section .footer-container .share-container .share-icons a {
       text-decoration: none;
-      color: #CDD6E0; }
+      color: #cdd6e0; }
       .footer-section .footer-container .share-container .share-icons a i {
         margin: 10px; }
     .footer-section .footer-container .share-container .share-icons a:hover {
-      color: #572EE5;
+      color: #572ee5;
       text-shadow: 0px 1.5px 5px #838282;
       transition: 0.3s; }
   .footer-section .footer-container .copyright {
     text-align: center; }
     .footer-section .footer-container .copyright p {
       font-size: 0.875rem;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 400; }
+
 .footer-section .top-bar {
-  background-color: #572EE5;
+  background-color: #572ee5;
   width: 100%;
   height: 5px; }
 
@@ -234,10 +247,10 @@ html {
       .body-container .header-container .navigation-container .nav-names .names {
         margin: 20px 50px 0px 0px; }
         .body-container .header-container .navigation-container .nav-names .names a {
-          color: #572EE5;
+          color: #572ee5;
           font-size: 0.81rem; }
         .body-container .header-container .navigation-container .nav-names .names a:hover {
-          border-bottom: 2px solid #5ED7C6;
+          border-bottom: 2px solid #5ed7c6;
           box-shadow: 0px 2px 1px rgba(156, 175, 195, 0.55);
           transition: 0.2s;
           text-shadow: 0px 1.5px 3px rgba(122, 122, 122, 0.55); }
@@ -288,6 +301,7 @@ html {
         margin-top: 5px; }
     .body-container .footer-section .footer-container .copyright {
       margin-top: 20px; } }
+
 html {
   font-size: 16px;
   letter-spacing: 0;
@@ -578,5 +592,3 @@ html {
           color: #ffff; }
     .darkMode .footer-section .footer-container .copyright {
       margin-top: 20px; } }
-
-/*# sourceMappingURL=main.css.map */
