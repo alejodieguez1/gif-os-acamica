@@ -207,9 +207,6 @@ html {
     }
   }
   #trending-gifos {
-    .trending-gifos-arrow {
-      display: none;
-    }
     #trending-gifos-container {
       display: flex;
       flex-direction: row;
@@ -355,6 +352,33 @@ html {
           .searchBar-container {
             width: 551px;
             justify-content: space-between;
+          }
+        }
+      }
+    }
+    #trending-gifos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .trending-gifos-arrow {
+        i {
+          cursor: pointer;
+        }
+      }
+      #trending-gifos-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        max-width: 60%;
+        .gif-container {
+          margin: 1.5rem;
+          img {
+            max-width: 357px;
+            max-height: 275px;
           }
         }
       }

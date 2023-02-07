@@ -39,3 +39,13 @@ request(urlTrending)
   .catch((error) => {
     console.error(error);
   });
+
+const left = document.getElementById("trending-left-arrow");
+const right = document.getElementById("trending-right-arrow");
+
+left.addEventListener("click", () => {
+  gifosContainer.scrollBy(-200, 0);
+});
+right.addEventListener("click", () => {
+  gifosContainer.scrollBy(200, 0);
+});

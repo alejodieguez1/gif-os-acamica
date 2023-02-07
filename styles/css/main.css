@@ -174,8 +174,6 @@ html {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     line-height: 23px; }
-  .trendingGif-section #trending-gifos .trending-gifos-arrow {
-    display: none; }
   .trendingGif-section #trending-gifos #trending-gifos-container {
     display: flex;
     flex-direction: row;
@@ -287,6 +285,26 @@ html {
     .body-container .search-section .search-container .searchSection-container .searchBar-container {
       width: 551px;
       justify-content: space-between; }
+  .body-container #trending-gifos {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .body-container #trending-gifos .trending-gifos-arrow i {
+      cursor: pointer; }
+    .body-container #trending-gifos #trending-gifos-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      max-width: 60%; }
+      .body-container #trending-gifos #trending-gifos-container .gif-container {
+        margin: 1.5rem; }
+        .body-container #trending-gifos #trending-gifos-container .gif-container img {
+          max-width: 357px;
+          max-height: 275px; }
   .body-container .footer-section .footer-container {
     padding: 0px 70px;
     flex-direction: row;
