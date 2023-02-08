@@ -1,8 +1,12 @@
 const apiKey = "p8ZMZYpVy2Zl7HlxVPCToc461j1rDepR";
 const url = "https://api.giphy.com/v1";
 const urlTrending = `${url}/gifs/trending?api_key=${apiKey}`;
-//API REQUEST FUNCTION
 
+const gifFavImage = "../images/icon-fav.svg";
+const gifDownloadImage = "../images/icon-download.svg";
+const gifMaxImage = "../images/icon-max-normal.svg";
+
+//API REQUEST FUNCTION
 function request(url) {
   return new Promise((resolve, reject) => {
     fetch(url)
@@ -13,10 +17,6 @@ function request(url) {
       .catch((error) => reject(error));
   });
 }
-
-const gifFavImage = "../images/icon-fav.svg";
-const gifDownloadImage = "../images/icon-download.svg";
-const gifMaxImage = "../images/icon-max-normal.svg";
 
 const gifosContainer = document.querySelector("#trending-gifos-container");
 
@@ -59,9 +59,17 @@ function createItem(src, container, itemId, gifUsername, gifTitle) {
   item.appendChild(gif);
   item.appendChild(gifInfoContainer);
 
+  // item.addEventListener("mouseover", () => {
+  //   item.classList.add("card-hover");
+  // });
+  // item.addEventListener("mouseout", () => {
+  //   item.classList.remove("card-hover");
+  // });
+
   container.appendChild(item);
 }
 
+// Trending API Request
 request(urlTrending)
   .then((data) => {
     for (let i = 0; i <= 10; i++) {
@@ -78,6 +86,39 @@ request(urlTrending)
     console.error(error);
   });
 
+//Search Section Functionality
+const userInput = document.querySelector("#txt-search");
+const searchBtn = document.querySelector("#btn-search");
+
+//Search API Request
+function search() {
+  let urlSearch = `${url}/gifs/search?api_key=${apiKey}&q=${userInput.value}`;
+  request(urlSearch)
+    .then((data) => {
+      let container = document.querySelector("#searchResult-container");
+      for (let i = 0; i <= 5; i++) {
+        createItem(
+          data.data[i].images.downsized.url,
+          container,
+          "gif-container"
+        );
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+//Search Input Value
+userInput.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    search(userInput.value);
+  }
+});
+searchBtn.addEventListener("click", () => {
+  search(userInput.value);
+});
+
+//Arrows slider functions
 const left = document.getElementById("trending-left-arrow");
 const right = document.getElementById("trending-right-arrow");
 

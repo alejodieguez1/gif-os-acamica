@@ -139,6 +139,23 @@ html {
           cursor: pointer;
           border: none;
           background-color: #5ed7c700; }
+    .search-section .search-container #searchResult-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .search-section .search-container #searchResult-container .gif-container {
+        margin: 1.5rem;
+        min-width: 243px;
+        height: 187px; }
+        .search-section .search-container #searchResult-container .gif-container .gifBtns-container {
+          display: none; }
+        .search-section .search-container #searchResult-container .gif-container img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+        .search-section .search-container #searchResult-container .gif-container .gifInfo-container {
+          display: none; }
     .search-section .search-container .trending-text {
       display: flex;
       flex-direction: column; }
@@ -185,12 +202,15 @@ html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; }
     .trendingGif-section #trending-gifos #trending-gifos-container .gif-container {
-      margin: 1.5rem; }
+      margin: 1.5rem;
+      min-width: 243px;
+      height: 187px; }
       .trendingGif-section #trending-gifos #trending-gifos-container .gif-container .gifBtns-container {
         display: none; }
       .trendingGif-section #trending-gifos #trending-gifos-container .gif-container img {
-        max-width: 243px;
-        max-height: 187px; }
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
       .trendingGif-section #trending-gifos #trending-gifos-container .gif-container .gifInfo-container {
         display: none; }
 
@@ -312,31 +332,21 @@ html {
     .body-container #trending-gifos #trending-gifos-container {
       display: flex;
       flex-direction: row;
-      align-items: center;
       overflow-x: scroll;
       overflow-y: hidden;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
-      max-width: 60%;
       scrollbar-color: #572ee5 transparent;
-      scrollbar-width: thin; }
+      scrollbar-width: thin;
+      max-width: 60%; }
       .body-container #trending-gifos #trending-gifos-container .gif-container {
-        margin: 1.5rem; }
+        margin: 0 1.5rem;
+        min-width: 243px;
+        height: 187px; }
         .body-container #trending-gifos #trending-gifos-container .gif-container img {
-          max-width: 357px;
-          max-height: 275px; }
-        .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifBtns-container,
-        .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifInfo-container {
-          display: block;
-          position: relative; }
-        .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifBtns-container {
-          top: 50px;
-          left: 220px; }
-          .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifBtns-container img {
-            margin: 0rem 0.2rem; }
-        .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifInfo-container {
-          bottom: 100px;
-          left: 20px; }
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover; }
   .body-container .footer-section .footer-container {
     padding: 0px 70px;
     flex-direction: row;
