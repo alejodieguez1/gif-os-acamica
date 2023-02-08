@@ -107,6 +107,7 @@ function search() {
     .catch((err) => {
       console.error(err);
     });
+  userInput.value = "";
   document.querySelector("#searchResult-container").innerHTML = "";
 }
 //Search Input Value
