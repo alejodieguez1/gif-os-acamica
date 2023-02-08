@@ -186,9 +186,13 @@ html {
     -webkit-overflow-scrolling: touch; }
     .trendingGif-section #trending-gifos #trending-gifos-container .gif-container {
       margin: 1.5rem; }
+      .trendingGif-section #trending-gifos #trending-gifos-container .gif-container .gifBtns-container {
+        display: none; }
       .trendingGif-section #trending-gifos #trending-gifos-container .gif-container img {
         max-width: 243px;
         max-height: 187px; }
+      .trendingGif-section #trending-gifos #trending-gifos-container .gif-container .gifInfo-container {
+        display: none; }
 
 .footer-section .footer-container {
   display: flex;
@@ -222,7 +226,7 @@ html {
   width: 100%;
   height: 5px; }
 
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .body-container .header-container .navigation-container {
     padding: 0px;
     padding-top: 20px;
@@ -313,12 +317,26 @@ html {
       overflow-y: hidden;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
-      max-width: 60%; }
+      max-width: 60%;
+      scrollbar-color: #572ee5 transparent;
+      scrollbar-width: thin; }
       .body-container #trending-gifos #trending-gifos-container .gif-container {
         margin: 1.5rem; }
         .body-container #trending-gifos #trending-gifos-container .gif-container img {
           max-width: 357px;
           max-height: 275px; }
+        .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifBtns-container,
+        .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifInfo-container {
+          display: block;
+          position: relative; }
+        .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifBtns-container {
+          top: 50px;
+          left: 220px; }
+          .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifBtns-container img {
+            margin: 0rem 0.2rem; }
+        .body-container #trending-gifos #trending-gifos-container .gif-container:hover .gifInfo-container {
+          bottom: 100px;
+          left: 20px; }
   .body-container .footer-section .footer-container {
     padding: 0px 70px;
     flex-direction: row;
@@ -340,15 +358,15 @@ html {
   font-size: 16px;
   letter-spacing: 0;
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 .darkMode {
-  background-color: #37383C;
+  background-color: #37383c;
   /* Header section */
   /* Search + Trending text section */ }
   .darkMode .header-container {
     width: 100%;
-    background: #37383C;
+    background: #37383c;
     position: fixed; }
     .darkMode .header-container .top-bar {
       background-color: #000000;
@@ -395,7 +413,7 @@ html {
           margin-right: 90px;
           margin-top: 40px; }
           .darkMode .header-container .navigation-container .nav-names .names a {
-            font-family: 'Montserrat', sans-serif;
+            font-family: "Montserrat", sans-serif;
             font-weight: 800;
             text-decoration: none;
             color: #ffff; }
@@ -435,7 +453,7 @@ html {
       /* Search box */
       /* Trending Text */ }
       .darkMode .search-section .search-container .first-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         line-height: 33px;
         align-self: center;
         margin-bottom: 1.9375rem;
@@ -446,7 +464,7 @@ html {
         width: 70%; }
         .darkMode .search-section .search-container .first-title .gifos-span {
           font-weight: 800;
-          color: #5ED7C6; }
+          color: #5ed7c6; }
       .darkMode .search-section .search-container .illustration-container {
         align-self: center;
         width: 273px;
@@ -468,8 +486,8 @@ html {
           display: flex; }
           .darkMode .search-section .search-container .searchSection-container .searchBar-container .search-box {
             background-color: #ffffff00;
-            color: #6B7989;
-            font-family: 'Roboto', sans-serif;
+            color: #6b7989;
+            font-family: "Roboto", sans-serif;
             font-weight: 400;
             padding: 15px 64px 13px 55px;
             outline: none;
@@ -485,14 +503,14 @@ html {
           text-align: center;
           font-size: 1rem;
           font-weight: 700;
-          font-family: 'Montserrat', sans-serif;
+          font-family: "Montserrat", sans-serif;
           color: #ffffff; }
         .darkMode .search-section .search-container .trending-text p {
           align-self: center;
           width: 60%;
           text-align: center;
           font-size: 0.875rem;
-          font-family: 'Montserrat', sans-serif;
+          font-family: "Montserrat", sans-serif;
           font-weight: 500;
           color: #ffffff; }
   .darkMode .trendingGif-section {
@@ -503,7 +521,7 @@ html {
     .darkMode .trendingGif-section .trendingGif-container h2 {
       font-size: 1.25rem;
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: 700;
       color: #ffffff;
       font-size: 1.25rem; }
@@ -511,9 +529,24 @@ html {
       color: #ffffff;
       font-size: 1rem;
       text-align: center;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 400;
       line-height: 23px; }
+    .darkMode .trendingGif-section #trending-gifos .trending-gifos-arrow {
+      display: none; }
+    .darkMode .trendingGif-section #trending-gifos #trending-gifos-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch; }
+      .darkMode .trendingGif-section #trending-gifos #trending-gifos-container .gif-container {
+        margin: 1.5rem; }
+        .darkMode .trendingGif-section #trending-gifos #trending-gifos-container .gif-container img {
+          max-width: 243px;
+          max-height: 187px; }
   .darkMode .footer-section .footer-container {
     display: flex;
     flex-direction: column; }
@@ -524,11 +557,11 @@ html {
       .darkMode .footer-section .footer-container .share-container p {
         color: #ffffff;
         font-size: 0.9375rem;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 400; }
       .darkMode .footer-section .footer-container .share-container .share-icons a {
         text-decoration: none;
-        color: #CDD6E0; }
+        color: #cdd6e0; }
         .darkMode .footer-section .footer-container .share-container .share-icons a i {
           margin: 10px; }
     .darkMode .footer-section .footer-container .copyright {
@@ -536,14 +569,14 @@ html {
       .darkMode .footer-section .footer-container .copyright p {
         color: #ffffff;
         font-size: 0.875rem;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 400; }
   .darkMode .footer-section .top-bar {
     background-color: #000000;
     width: 100%;
     height: 5px; }
 
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .darkMode .header-container .navigation-container {
     padding: 0px;
     padding-top: 20px;
@@ -573,7 +606,7 @@ html {
           color: #ffffff;
           font-size: 0.81rem; }
         .darkMode .header-container .navigation-container .nav-names .names a:hover {
-          border-bottom: 2px solid #5ED7C6;
+          border-bottom: 2px solid #5ed7c6;
           box-shadow: 0px 2px 1px rgba(156, 175, 195, 0.55);
           transition: 0.2s;
           text-shadow: 0px 1.5px 3px rgba(122, 122, 122, 0.55); }
@@ -608,6 +641,40 @@ html {
     .darkMode .search-section .search-container .searchSection-container .searchBar-container {
       width: 551px;
       justify-content: space-between; }
+  .darkMode #trending-gifos {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .darkMode #trending-gifos .trending-gifos-arrow {
+      display: block;
+      margin: 0rem 1.5rem;
+      border: 1px solid #fff;
+      padding: 0.8rem;
+      cursor: pointer; }
+      .darkMode #trending-gifos .trending-gifos-arrow i {
+        color: #fff;
+        font-size: 1.2rem; }
+      .darkMode #trending-gifos .trending-gifos-arrow:hover {
+        background-color: #fff;
+        transition: 0.5s; }
+        .darkMode #trending-gifos .trending-gifos-arrow:hover i {
+          color: #000; }
+    .darkMode #trending-gifos #trending-gifos-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      max-width: 60%;
+      scrollbar-color: #fff transparent;
+      scrollbar-width: thin; }
+      .darkMode #trending-gifos #trending-gifos-container .gif-container {
+        margin: 1.5rem; }
+        .darkMode #trending-gifos #trending-gifos-container .gif-container img {
+          max-width: 357px;
+          max-height: 275px; }
   .darkMode .footer-section .footer-container {
     padding: 0px 70px;
     flex-direction: row;

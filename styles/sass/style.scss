@@ -220,9 +220,15 @@ html {
       -webkit-overflow-scrolling: touch;
       .gif-container {
         margin: 1.5rem;
+        .gifBtns-container {
+          display: none;
+        }
         img {
           max-width: 243px;
           max-height: 187px;
+        }
+        .gifInfo-container {
+          display: none;
         }
       }
     }
@@ -272,7 +278,7 @@ html {
   }
 }
 
-@media (min-width: 768px) {
+@media all and(min-width: 768px) {
   .body-container {
     .header-container {
       .navigation-container {
@@ -390,11 +396,31 @@ html {
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
         max-width: 60%;
+        scrollbar-color: #572ee5 transparent;
+        scrollbar-width: thin;
         .gif-container {
           margin: 1.5rem;
           img {
             max-width: 357px;
             max-height: 275px;
+          }
+          &:hover {
+            .gifBtns-container,
+            .gifInfo-container {
+              display: block;
+              position: relative;
+            }
+            .gifBtns-container {
+              top: 50px;
+              left: 220px;
+              img {
+                margin: 0rem 0.2rem;
+              }
+            }
+            .gifInfo-container {
+              bottom: 100px;
+              left: 20px;
+            }
           }
         }
       }
@@ -424,4 +450,5 @@ html {
     }
   }
 }
+
 @import "./darkMode.scss";
