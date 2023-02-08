@@ -107,6 +107,7 @@ function search() {
     .catch((err) => {
       console.error(err);
     });
+  document.querySelector("#searchResult-container").innerHTML = "";
 }
 //Search Input Value
 userInput.addEventListener("keyup", (event) => {

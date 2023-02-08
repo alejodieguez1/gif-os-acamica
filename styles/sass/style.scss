@@ -388,6 +388,10 @@ html {
             justify-content: space-between;
           }
         }
+        #searchResult-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
       }
     }
     #trending-gifos {
@@ -413,24 +417,11 @@ html {
         }
       }
       #trending-gifos-container {
-        display: flex;
-        flex-direction: row;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
         scrollbar-color: #572ee5 transparent;
         scrollbar-width: thin;
         max-width: 60%;
         .gif-container {
           margin: 0 1.5rem;
-          min-width: 243px;
-          height: 187px;
-          img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-          }
           // &:hover {
           //   .gifBtns-container,
           //   .gifInfo-container {

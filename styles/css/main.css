@@ -311,6 +311,9 @@ html {
     .body-container .search-section .search-container .searchSection-container .searchBar-container {
       width: 551px;
       justify-content: space-between; }
+  .body-container .search-section .search-container #searchResult-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
   .body-container #trending-gifos {
     display: flex;
     align-items: center;
@@ -330,23 +333,11 @@ html {
         .body-container #trending-gifos .trending-gifos-arrow:hover i {
           color: #ffff; }
     .body-container #trending-gifos #trending-gifos-container {
-      display: flex;
-      flex-direction: row;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
       scrollbar-color: #572ee5 transparent;
       scrollbar-width: thin;
       max-width: 60%; }
       .body-container #trending-gifos #trending-gifos-container .gif-container {
-        margin: 0 1.5rem;
-        min-width: 243px;
-        height: 187px; }
-        .body-container #trending-gifos #trending-gifos-container .gif-container img {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: cover; }
+        margin: 0 1.5rem; }
   .body-container .footer-section .footer-container {
     padding: 0px 70px;
     flex-direction: row;
