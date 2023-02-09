@@ -105,11 +105,11 @@ html {
 /* Search + Trending text section */
 .search-section {
   padding-top: 100px;
-  .search-container {
+  .search-section-container {
     display: flex;
     flex-direction: column;
     /* Main tittle */
-    .first-title {
+    .search-section-title {
       font-family: "Montserrat", sans-serif;
       line-height: 33px;
       align-self: center;
@@ -125,7 +125,7 @@ html {
       }
     }
     /* Illustration */
-    .illustration-container {
+    .search-illustration-container {
       align-self: center;
       width: 273px;
       height: 130px;
@@ -135,7 +135,7 @@ html {
       }
     }
     /* Search box */
-    .searchSection-container {
+    .search-input-container {
       align-self: center;
       border-radius: 1.68rem;
       border: 1px solid #572ee5;
@@ -145,22 +145,33 @@ html {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      .searchBar-container {
+      .search-box-container {
         display: flex;
-        padding: 0 1rem;
-        .search-box {
+        .search-box-input {
           color: #6b7989;
           font-family: "Roboto", sans-serif;
           font-weight: 400;
-          padding: 15px 64px 13px 55px;
+          padding: 0 2.5rem;
           outline: none;
           border: none;
         }
-        .search-btn {
+        .search-box-btn {
           cursor: pointer;
           border: none;
           background-color: #5ed7c700;
         }
+      }
+    }
+    .search-result-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #search-result-text {
+        padding: 3rem 0 0.5rem;
+        color: #572ee5;
+        text-transform: capitalize;
+        border-top: 1px solid #b4b4b4;
+        font-size: 1.5rem;
       }
     }
     #searchResult-container {
@@ -168,6 +179,7 @@ html {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 0 1rem;
       .gif-container {
         margin: 1.5rem;
         min-width: 243px;
@@ -364,13 +376,13 @@ html {
       }
     }
     .search-section {
-      .search-container {
-        .first-title {
+      .search-section-container {
+        .search-section-title {
           font-size: 2.1875rem;
           line-height: 50px;
           width: 59%;
         }
-        .illustration-container {
+        .search-illustration-container {
           align-self: center;
           width: 399px;
           height: 190px;
@@ -379,18 +391,20 @@ html {
             height: 190px;
           }
         }
-        .searchSection-container {
+        .search-input-container {
           align-self: center;
           display: flex;
           flex-direction: row;
           width: 551px;
-          .searchBar-container {
+          .search-box-container {
             width: 551px;
             justify-content: space-between;
+            padding: 0 2rem;
           }
         }
         #searchResult-container {
           display: grid;
+          padding: 0 10rem;
           grid-template-columns: 1fr 1fr 1fr 1fr;
         }
       }

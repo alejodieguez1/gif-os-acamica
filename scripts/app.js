@@ -100,7 +100,9 @@ function search() {
         createItem(
           data.data[i].images.downsized.url,
           container,
-          "gif-container"
+          "gif-container",
+          data.data[i].username,
+          data.data[i].title
         );
       }
     })
@@ -110,14 +112,15 @@ function search() {
   userInput.value = "";
   document.querySelector("#searchResult-container").innerHTML = "";
 }
+
+const searchText = document.querySelector("#search-result-text");
+
 //Search Input Value
 userInput.addEventListener("keyup", (event) => {
   if (event.keyCode === 13) {
+    searchText.innerHTML = userInput.value;
     search(userInput.value);
   }
-});
-searchBtn.addEventListener("click", () => {
-  search(userInput.value);
 });
 
 //Arrows slider functions

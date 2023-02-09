@@ -114,13 +114,13 @@
       </header>
       <!-- SEARCH + TRENDING TEXT SECTION -->
       <main class="search-section">
-        <div class="search-container">
-          <h1 class="first-title">
+        <div class="search-section-container">
+          <h1 class="search-section-title">
             Inspírate, busca, guarda, y crea los mejores
             <span class="gifos-span">GIFOS</span>
           </h1>
           <!-- Illustration -->
-          <div class="illustration-container">
+          <div class="search-illustration-container">
             <img
               class="header-illustration"
               src="/images/ilustra_header.svg"
@@ -128,15 +128,15 @@
             />
           </div>
           <!-- Search Box -->
-          <div class="searchSection-container">
-            <div class="searchBar-container">
+          <div class="search-input-container">
+            <div class="search-box-container">
               <input
-                class="search-box"
+                class="search-box-input"
                 type="text"
                 id="txt-search"
                 placeholder="Busca GIFOS y más"
               />
-              <button class="search-btn" id="btn-search">
+              <button class="search-box-btn" id="btn-search">
                 <img
                   id="search-icon"
                   src="/images/icon-search.svg"
@@ -147,7 +147,11 @@
           </div>
           <ul class="suggested-search"></ul>
           <div class="search-result-container">
+            <h1 id="search-result-text"></h1>
             <div id="searchResult-container"></div>
+            <button type="button" id="searchResult-more-btn" class="hidden">
+              Ver Más
+            </button>
           </div>
           <!-- Trending Text -->
           <div class="trending-text">
