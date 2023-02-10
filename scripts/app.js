@@ -20,6 +20,15 @@ function request(url) {
 
 const gifosContainer = document.querySelector("#trending-gifos-container");
 
+const searchResultsContainer = document.querySelector(
+  "#search-results-container"
+);
+
+const searchText = document.querySelector("#search-result-title");
+
+const userInput = document.querySelector("#txt-search");
+const searchBtn = document.querySelector("#btn-search");
+
 //Gif card creation function
 function createItem(src, container, itemId, gifUsername, gifTitle) {
   const item = document.createElement("div");
@@ -65,8 +74,25 @@ function createItem(src, container, itemId, gifUsername, gifTitle) {
   // item.addEventListener("mouseout", () => {
   //   item.classList.remove("card-hover");
   // });
-
   container.appendChild(item);
+}
+function createError(err, container) {
+  if (err.data == undefined) {
+    const item = document.createElement("div");
+    item.className = "error-container";
+
+    const errorImg = document.createElement("img");
+    errorImg.src = "../images/icon-busqueda-sin-resultado.svg";
+
+    const parraf = document.createElement("h1");
+    parraf.innerHTML = "Intenta con otra busqueda";
+
+    item.appendChild(errorImg);
+    item.appendChild(parraf);
+
+    // container.id = "errorContainer";
+    container.appendChild(item);
+  }
 }
 
 // Trending API Request
@@ -86,16 +112,13 @@ request(urlTrending)
     console.error(error);
   });
 
-//Search Section Functionality
-const userInput = document.querySelector("#txt-search");
-const searchBtn = document.querySelector("#btn-search");
-
 //Search API Request
 function search() {
   let urlSearch = `${url}/gifs/search?api_key=${apiKey}&q=${userInput.value}`;
   request(urlSearch)
     .then((data) => {
-      let container = document.querySelector("#searchResult-container");
+      let container = searchResultsContainer;
+      container.className = "search-results-container";
       for (let i = 0; i <= 5; i++) {
         createItem(
           data.data[i].images.downsized.url,
@@ -107,13 +130,13 @@ function search() {
       }
     })
     .catch((err) => {
-      console.error(err);
+      let container = searchResultsContainer;
+      container.className = "errorContainer";
+      createError(err, container);
     });
   userInput.value = "";
-  document.querySelector("#searchResult-container").innerHTML = "";
+  document.querySelector("#search-results-container").innerHTML = "";
 }
-
-const searchText = document.querySelector("#search-result-text");
 
 //Search Input Value
 userInput.addEventListener("keyup", (event) => {

@@ -1,8 +1,8 @@
-var darkMode = document.getElementById("dark-mode");
-var bodyContainer = document.getElementById("bodyContainer");
-var textLogo = document.querySelector("#GIFOS_1");
-var searchIcon = document.getElementById("search-icon");
-var createBtn = document.getElementById("create-gif");
+const darkMode = document.getElementById("dark-mode");
+const bodyContainer = document.getElementById("bodyContainer");
+const textLogo = document.querySelector("#GIFOS_1");
+const searchIcon = document.getElementById("search-icon");
+const createBtn = document.getElementById("create-gif");
 
 darkMode.addEventListener("click", () => {
   if (bodyContainer.classList.contains("body-container")) {

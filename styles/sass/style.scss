@@ -166,34 +166,53 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
-      #search-result-text {
+      #search-result-title {
         padding: 3rem 0 0.5rem;
         color: #572ee5;
         text-transform: capitalize;
         border-top: 1px solid #b4b4b4;
         font-size: 1.5rem;
       }
-    }
-    #searchResult-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0 1rem;
-      .gif-container {
-        margin: 1.5rem;
-        min-width: 243px;
-        height: 187px;
-        .gifBtns-container {
-          display: none;
+      .search-results-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        .gif-container {
+          margin: 1.5rem;
+          min-width: 243px;
+          height: 187px;
+          .gifBtns-container {
+            display: none;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .gifInfo-container {
+            display: none;
+          }
         }
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-        .gifInfo-container {
-          display: none;
+      }
+      .errorContainer {
+        .error-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 4rem 0;
+          img {
+            width: 150px;
+            height: 150px;
+          }
+          h1 {
+            font-family: "Montserrat";
+            font-size: 1rem;
+            color: #50e3c2;
+            line-height: 25px;
+            margin: 4rem 0 1rem;
+          }
         }
       }
     }
@@ -402,10 +421,17 @@ html {
             padding: 0 2rem;
           }
         }
-        #searchResult-container {
+        .search-results-container {
           display: grid;
           padding: 0 10rem;
           grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .errorContainer {
+          .error-container {
+            h1 {
+              font-size: 1.3rem;
+            }
+          }
         }
       }
     }

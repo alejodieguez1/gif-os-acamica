@@ -105,11 +105,11 @@ html {
   /* Search + Trending text section */
   .search-section {
     padding-top: 100px;
-    .search-container {
+    .search-section-container {
       display: flex;
       flex-direction: column;
       /* Main tittle */
-      .first-title {
+      .search-section-title {
         font-family: "Montserrat", sans-serif;
         line-height: 33px;
         align-self: center;
@@ -125,7 +125,7 @@ html {
         }
       }
       /* Illustration */
-      .illustration-container {
+      .search-illustration-container {
         align-self: center;
         width: 273px;
         height: 130px;
@@ -135,7 +135,7 @@ html {
         }
       }
       /* Search box */
-      .searchSection-container {
+      .search-input-container {
         align-self: center;
         border-radius: 1.68rem;
         border: 1px solid #ffffff;
@@ -145,21 +145,64 @@ html {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        .searchBar-container {
+        .search-box-container {
           display: flex;
-          .search-box {
+          .search-box-input {
             background-color: #ffffff00;
             color: #6b7989;
             font-family: "Roboto", sans-serif;
             font-weight: 400;
-            padding: 15px 64px 13px 55px;
+            padding: 0 2.5rem;
             outline: none;
             border: none;
           }
-          .search-btn {
+          .search-box-btn {
             cursor: pointer;
             border: none;
             background-color: #5ed7c700;
+          }
+        }
+      }
+      .search-result-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #search-result-title {
+          padding: 3rem 0 0.5rem;
+          color: #572ee5;
+          text-transform: capitalize;
+          border-top: 1px solid #b4b4b4;
+          font-size: 1.5rem;
+        }
+        #search-results-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 1rem;
+          .gif-container {
+            margin: 1.5rem;
+            min-width: 243px;
+            height: 187px;
+            .gifBtns-container {
+              display: none;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .gifInfo-container {
+              display: none;
+            }
+          }
+        }
+        #error-result {
+          .error-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
         }
       }
@@ -333,13 +376,13 @@ html {
       }
     }
     .search-section {
-      .search-container {
-        .first-title {
+      .search-section-container {
+        .search-section-title {
           font-size: 2.1875rem;
           line-height: 50px;
           width: 59%;
         }
-        .illustration-container {
+        .search-illustration-container {
           align-self: center;
           width: 399px;
           height: 190px;
@@ -348,14 +391,28 @@ html {
             height: 190px;
           }
         }
-        .searchSection-container {
+        .search-input-container {
           align-self: center;
           display: flex;
           flex-direction: row;
           width: 551px;
-          .searchBar-container {
+          .search-box-container {
             width: 551px;
             justify-content: space-between;
+            padding: 0 2rem;
+          }
+        }
+        #search-results-container {
+          display: grid;
+          padding: 0 10rem;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        #error-result {
+          .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
           }
         }
       }
@@ -367,38 +424,67 @@ html {
       .trending-gifos-arrow {
         display: block;
         margin: 0rem 1.5rem;
-        border: 1px solid #fff;
+        border: 1px solid #572ee5;
         padding: 0.8rem;
         cursor: pointer;
         i {
-          color: #fff;
+          color: #572ee5;
           font-size: 1.2rem;
         }
         &:hover {
-          background-color: #fff;
+          background-color: #572ee5;
           transition: 0.5s;
           i {
-            color: #000;
+            color: #ffff;
           }
         }
       }
       #trending-gifos-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        max-width: 60%;
         scrollbar-color: #fff transparent;
         scrollbar-width: thin;
+        max-width: 60%;
         .gif-container {
-          margin: 1.5rem;
-          img {
-            max-width: 357px;
-            max-height: 275px;
-          }
+          margin: 0 1.5rem;
+          // &:hover {
+          //   .gifBtns-container,
+          //   .gifInfo-container {
+          //     display: flex;
+          //     position: relative;
+          //     transition: 0.5s;
+          //   }
+          //   .gifBtns-container {
+          //     display: none;
+          //     flex-direction: row;
+          //     justify-content: space-between;
+          //     top: 50px;
+          //     left: 50%;
+          //     max-width: 120px;
+          //     overflow: hidden;
+          //     img {
+          //       width: 32px;
+          //       height: 32px;
+          //     }
+          //   }
+          //   .gifInfo-container {
+          //     bottom: 100px;
+          //     left: 20px;
+          //     color: #fff;
+          //     flex-direction: column;
+          //     text-align: left;
+          //     p,
+          //     h4 {
+          //       margin: 0;
+          //       font-family: "Roboto";
+          //     }
+          //     p {
+          //       font-weight: 400;
+          //     }
+          //     h4 {
+          //       font-weight: 600;
+          //       max-width: 90%;
+          //     }
+          //   }
+          // }
         }
       }
     }
