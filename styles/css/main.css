@@ -179,7 +179,7 @@ html {
           font-family: "Montserrat";
           font-size: 1rem;
           color: #50e3c2;
-          line-height: 25px;
+          line-height: 1.5rem;
           margin: 4rem 0 1rem; }
     .search-section .search-section-container .trending-text {
       display: flex;
@@ -536,29 +536,38 @@ html {
           text-transform: capitalize;
           border-top: 1px solid #b4b4b4;
           font-size: 1.5rem; }
-        .darkMode .search-section .search-section-container .search-result-container #search-results-container {
+        .darkMode .search-section .search-section-container .search-result-container .search-results-container {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           padding: 0 1rem; }
-          .darkMode .search-section .search-section-container .search-result-container #search-results-container .gif-container {
+          .darkMode .search-section .search-section-container .search-result-container .search-results-container .gif-container {
             margin: 1.5rem;
             min-width: 243px;
             height: 187px; }
-            .darkMode .search-section .search-section-container .search-result-container #search-results-container .gif-container .gifBtns-container {
+            .darkMode .search-section .search-section-container .search-result-container .search-results-container .gif-container .gifBtns-container {
               display: none; }
-            .darkMode .search-section .search-section-container .search-result-container #search-results-container .gif-container img {
+            .darkMode .search-section .search-section-container .search-result-container .search-results-container .gif-container img {
               width: 100%;
               height: 100%;
               object-fit: cover; }
-            .darkMode .search-section .search-section-container .search-result-container #search-results-container .gif-container .gifInfo-container {
+            .darkMode .search-section .search-section-container .search-result-container .search-results-container .gif-container .gifInfo-container {
               display: none; }
-        .darkMode .search-section .search-section-container .search-result-container #error-result .error-container {
+        .darkMode .search-section .search-section-container .search-result-container .errorContainer .error-container {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center; }
+          align-items: center;
+          margin: 4rem 0; }
+          .darkMode .search-section .search-section-container .search-result-container .errorContainer .error-container img {
+            width: 150px;
+            height: 150px; }
+          .darkMode .search-section .search-section-container .search-result-container .errorContainer .error-container h1 {
+            font-family: "Montserrat";
+            font-size: 1rem;
+            color: #5ed7c6;
+            line-height: 1.5rem;
+            margin: 4rem 0 1rem; }
       .darkMode .search-section .search-section-container .trending-text {
         display: flex;
         flex-direction: column; }
@@ -705,15 +714,12 @@ html {
       width: 551px;
       justify-content: space-between;
       padding: 0 2rem; }
-  .darkMode .search-section .search-section-container #search-results-container {
+  .darkMode .search-section .search-section-container .search-results-container {
     display: grid;
     padding: 0 10rem;
     grid-template-columns: 1fr 1fr 1fr 1fr; }
-  .darkMode .search-section .search-section-container #error-result .error-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
+  .darkMode .search-section .search-section-container .errorContainer .error-container h1 {
+    font-size: 1.3rem; }
   .darkMode #trending-gifos {
     display: flex;
     align-items: center;
