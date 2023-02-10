@@ -18,11 +18,14 @@ function request(url) {
   });
 }
 
+//Important Variables Declarations
 const gifosContainer = document.querySelector("#trending-gifos-container");
 
 const searchResultsContainer = document.querySelector(
   "#search-results-container"
 );
+
+const showMoreBtn = document.querySelector("#search-result-btn");
 
 const searchText = document.querySelector("#search-result-title");
 
@@ -68,14 +71,16 @@ function createItem(src, container, itemId, gifUsername, gifTitle) {
   item.appendChild(gif);
   item.appendChild(gifInfoContainer);
 
-  // item.addEventListener("mouseover", () => {
-  //   item.classList.add("card-hover");
-  // });
-  // item.addEventListener("mouseout", () => {
-  //   item.classList.remove("card-hover");
-  // });
+  item.addEventListener("mouseover", () => {
+    item.classList.add("card-hover");
+  });
+  item.addEventListener("mouseout", () => {
+    item.classList.remove("card-hover");
+  });
   container.appendChild(item);
 }
+
+// Search Error Creation
 function createError(err, container) {
   if (err.data == undefined) {
     const item = document.createElement("div");
@@ -90,7 +95,6 @@ function createError(err, container) {
     item.appendChild(errorImg);
     item.appendChild(parraf);
 
-    // container.id = "errorContainer";
     container.appendChild(item);
   }
 }
@@ -128,11 +132,13 @@ function search() {
           data.data[i].title
         );
       }
+      showMoreBtn.classList.replace("hidden", "showBtn");
     })
     .catch((err) => {
       let container = searchResultsContainer;
       container.className = "errorContainer";
       createError(err, container);
+      showMoreBtn.classList.replace("showBtn", "hidden");
     });
   userInput.value = "";
   document.querySelector("#search-results-container").innerHTML = "";

@@ -197,6 +197,19 @@ html {
             }
           }
         }
+        .hidden {
+          display: none;
+        }
+        .showBtn {
+          margin: 2rem 0rem;
+          padding: 1rem 3rem;
+          background-color: transparent;
+          border: 1px solid #fff;
+          border-radius: 3rem;
+          color: #fff;
+          font-family: "Montserrat";
+          font-weight: 700;
+        }
         .errorContainer {
           .error-container {
             display: flex;
@@ -417,6 +430,12 @@ html {
           display: grid;
           padding: 0 10rem;
           grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .showBtn:hover {
+          background-color: #fff;
+          color: #000000;
+          transition: 0.5s;
+          box-shadow: 0px 0px 8px #a8a8a8;
         }
         .errorContainer {
           .error-container {

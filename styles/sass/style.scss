@@ -196,6 +196,19 @@ html {
           }
         }
       }
+      .hidden {
+        display: none;
+      }
+      .showBtn {
+        margin: 2rem 0rem;
+        padding: 1rem 3rem;
+        background-color: transparent;
+        border: 1px solid #572ee5;
+        border-radius: 3rem;
+        color: #572ee5;
+        font-family: "Montserrat";
+        font-weight: 700;
+      }
       .errorContainer {
         .error-container {
           display: flex;
@@ -314,7 +327,7 @@ html {
         }
         a:hover {
           color: #572ee5;
-          text-shadow: 0px 1.5px 5px rgb(131, 130, 130);
+          text-shadow: 0px 0px 5px #562ee577;
           transition: 0.3s;
         }
       }
@@ -415,6 +428,10 @@ html {
           display: flex;
           flex-direction: row;
           width: 551px;
+          &:hover {
+            transform: scale(1.02);
+            transition: 0.5s;
+          }
           .search-box-container {
             width: 551px;
             justify-content: space-between;
@@ -425,6 +442,12 @@ html {
           display: grid;
           padding: 0 10rem;
           grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .showBtn:hover {
+          background-color: #572ee5;
+          color: #ffff;
+          transition: 0.5s;
+          box-shadow: 0px 0px 8px #572ee5;
         }
         .errorContainer {
           .error-container {
@@ -452,6 +475,7 @@ html {
         &:hover {
           background-color: #572ee5;
           transition: 0.5s;
+          box-shadow: 0px 0px 8px #572ee5;
           i {
             color: #ffff;
           }
