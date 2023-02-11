@@ -4,6 +4,10 @@ const textLogo = document.querySelector("#GIFOS_1");
 const searchIcon = document.getElementById("search-icon");
 const createBtn = document.getElementById("create-gif");
 
+// let mediaQueryObj = window.matchMedia("(prefers-color-scheme: dark)");
+// let isDarkMode = mediaQueryObj.matches; //
+// document.getElementById("status").textContent = "Is Dark Mode :  " + isDarkMode;
+
 darkMode.addEventListener("click", () => {
   if (bodyContainer.classList.contains("body-container")) {
     bodyContainer.classList.replace("body-container", "darkMode");

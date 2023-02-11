@@ -25,7 +25,7 @@ const searchResultsContainer = document.querySelector(
   "#search-results-container"
 );
 
-const showMoreBtn = document.querySelector("#search-result-btn");
+const showMoreBtn = document.querySelector("#search-result-more");
 
 const searchText = document.querySelector("#search-result-title");
 
@@ -33,12 +33,13 @@ const userInput = document.querySelector("#txt-search");
 const searchBtn = document.querySelector("#btn-search");
 
 //Gif card creation function
-function createItem(src, container, itemId, gifUsername, gifTitle) {
+function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
   const item = document.createElement("div");
-  item.className = itemId;
+  item.className = itemClass;
 
   const gif = document.createElement("img");
   gif.src = src;
+  gif.id = itemId;
 
   const gifBtnsContainer = document.createElement("div");
   gifBtnsContainer.className = "gifBtns-container";
@@ -107,6 +108,7 @@ request(urlTrending)
         data.data[i].images.downsized.url,
         gifosContainer,
         "gif-container",
+        data.data[i].id,
         data.data[i].username,
         data.data[i].title
       );
@@ -123,11 +125,12 @@ function search() {
     .then((data) => {
       let container = searchResultsContainer;
       container.className = "search-results-container";
-      for (let i = 0; i <= 5; i++) {
+      for (let i = 0; i <= 7; i++) {
         createItem(
           data.data[i].images.downsized.url,
           container,
           "gif-container",
+          data.data[i].id,
           data.data[i].username,
           data.data[i].title
         );
@@ -140,9 +143,39 @@ function search() {
       createError(err, container);
       showMoreBtn.classList.replace("showBtn", "hidden");
     });
+  sessionStorage.setItem("userInput", userInput.value);
   userInput.value = "";
   document.querySelector("#search-results-container").innerHTML = "";
 }
+
+function showMore() {
+  let container = searchResultsContainer;
+  let urlSearch = `${url}/gifs/search?api_key=${apiKey}&q=${sessionStorage.getItem(
+    "userInput"
+  )}`;
+  request(urlSearch)
+    .then((data) => {
+      for (let i = 0; i <= 7; i++) {
+        console.log(data.data[i].id);
+        if (data.data[i].id !== data.data[i].id) {
+          createItem(
+            data.data[i].images.downsized.url,
+            container,
+            "gif-container",
+            data.data[i].username,
+            data.data[i].title
+          );
+        }
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
+showMoreBtn.addEventListener("click", () => {
+  showMore();
+});
 
 //Search Input Value
 userInput.addEventListener("keyup", (event) => {
