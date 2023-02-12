@@ -33,6 +33,8 @@ const searchText = document.querySelector("#search-result-title");
 const userInput = document.querySelector("#txt-search");
 const searchBtn = document.querySelector("#btn-search");
 
+const categoriesContainer = document.querySelector("#suggestions");
+
 //Gif card creation function
 function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
   const item = document.createElement("div");
@@ -101,6 +103,13 @@ function createError(err, container) {
   }
 }
 
+function createSugestions(name, container, itemClass) {
+  const item = document.createElement("h2");
+  item.className = itemClass;
+  item.innerHTML = `${name},`;
+  container.appendChild(item);
+}
+
 // Trending API Request
 request(urlTrending)
   .then((data) => {
@@ -122,8 +131,12 @@ request(urlTrending)
 //Trending categories API Request
 request(urlCategories)
   .then((data) => {
-    for (let i = 0; i <= 5; i++) {
-      console.log(data.data[i]);
+    for (let i = 0; i <= 4; i++) {
+      createSugestions(
+        data.data[i].name,
+        categoriesContainer,
+        "suggestions-text"
+      );
     }
   })
   .catch((err) => {
