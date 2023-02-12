@@ -1,6 +1,7 @@
 const apiKey = "p8ZMZYpVy2Zl7HlxVPCToc461j1rDepR";
 const url = "https://api.giphy.com/v1";
 const urlTrending = `${url}/gifs/trending?api_key=${apiKey}`;
+const urlCategories = `${url}/gifs/categories?api_key=${apiKey}`;
 
 const gifFavImage = "../images/icon-fav.svg";
 const gifDownloadImage = "../images/icon-download.svg";
@@ -39,7 +40,6 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
 
   const gif = document.createElement("img");
   gif.src = src;
-  gif.id = itemId;
 
   const gifBtnsContainer = document.createElement("div");
   gifBtnsContainer.className = "gifBtns-container";
@@ -71,6 +71,7 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
   item.appendChild(gifBtnsContainer);
   item.appendChild(gif);
   item.appendChild(gifInfoContainer);
+  item.id = itemId;
 
   item.addEventListener("mouseover", () => {
     item.classList.add("card-hover");
@@ -118,6 +119,17 @@ request(urlTrending)
     console.error(error);
   });
 
+//Trending categories API Request
+request(urlCategories)
+  .then((data) => {
+    for (let i = 0; i <= 5; i++) {
+      console.log(data.data[i]);
+    }
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
 //Search API Request
 function search() {
   let urlSearch = `${url}/gifs/search?api_key=${apiKey}&q=${userInput.value}`;
@@ -149,19 +161,20 @@ function search() {
 }
 
 function showMore() {
+  let elementosArr = document.querySelectorAll(".gif-container");
   let container = searchResultsContainer;
   let urlSearch = `${url}/gifs/search?api_key=${apiKey}&q=${sessionStorage.getItem(
     "userInput"
   )}`;
   request(urlSearch)
     .then((data) => {
-      for (let i = 0; i <= 7; i++) {
-        console.log(data.data[i].id);
-        if (data.data[i].id !== data.data[i].id) {
+      for (let i = 0; i <= 101; i++) {
+        if (elementosArr[i].id !== data.data[i].id) {
           createItem(
             data.data[i].images.downsized.url,
             container,
             "gif-container",
+            data.data[i].id,
             data.data[i].username,
             data.data[i].title
           );
