@@ -203,7 +203,9 @@ html {
         color: #572ee5; }
       .search-section .search-section-container .trending-text #suggestions {
         display: flex;
-        flex-direction: row; }
+        flex-direction: row;
+        height: auto;
+        width: 70%; }
         .search-section .search-section-container .trending-text #suggestions h2 {
           text-transform: capitalize;
           font-size: 1rem;

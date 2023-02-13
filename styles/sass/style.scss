@@ -243,6 +243,9 @@ html {
       #suggestions {
         display: flex;
         flex-direction: row;
+        height: auto;
+        width: 70%;
+
         h2 {
           text-transform: capitalize;
           font-size: 1rem;
