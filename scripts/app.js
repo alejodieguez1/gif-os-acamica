@@ -1,3 +1,4 @@
+//Important Variables Declarations
 const apiKey = "p8ZMZYpVy2Zl7HlxVPCToc461j1rDepR";
 const url = "https://api.giphy.com/v1";
 const urlTrending = `${url}/gifs/trending?api_key=${apiKey}`;
@@ -7,19 +8,6 @@ const gifFavImage = "../images/icon-fav.svg";
 const gifDownloadImage = "../images/icon-download.svg";
 const gifMaxImage = "../images/icon-max-normal.svg";
 
-//API REQUEST FUNCTION
-function request(url) {
-  return new Promise((resolve, reject) => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((response) => {
-        return resolve(response);
-      })
-      .catch((error) => reject(error));
-  });
-}
-
-//Important Variables Declarations
 const gifosContainer = document.querySelector("#trending-gifos-container");
 
 const searchResultsContainer = document.querySelector(
@@ -34,6 +22,23 @@ const userInput = document.querySelector("#txt-search");
 const searchBtn = document.querySelector("#btn-search");
 
 const categoriesContainer = document.querySelector("#suggestions");
+
+const left = document.getElementById("trending-left-arrow");
+const right = document.getElementById("trending-right-arrow");
+
+const contentContainer = document.querySelector("#bodyContainer");
+
+//API REQUEST FUNCTION
+function request(url) {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((response) => {
+        return resolve(response);
+      })
+      .catch((error) => reject(error));
+  });
+}
 
 //Gif card creation function
 function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
@@ -131,7 +136,6 @@ request(urlTrending)
 //Trending categories API Request
 request(urlCategories)
   .then((data) => {
-    console.log(data.data);
     createSugestions(
       data.data[0].name,
       data.data[1].name,
@@ -215,8 +219,6 @@ userInput.addEventListener("keyup", (event) => {
 });
 
 //Arrows slider functions
-const left = document.getElementById("trending-left-arrow");
-const right = document.getElementById("trending-right-arrow");
 
 left.addEventListener("click", () => {
   gifosContainer.scrollBy(-400, 0);

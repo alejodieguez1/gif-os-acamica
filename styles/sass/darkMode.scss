@@ -169,7 +169,7 @@
           align-items: center;
           #search-result-title {
             padding: 3rem 0 0.5rem;
-            color: #572ee5;
+            color: #fff;
             text-transform: capitalize;
             border-top: 1px solid #b4b4b4;
             font-size: 1.5rem;
@@ -373,12 +373,10 @@
               a {
                 color: #ffffff;
                 font-size: 0.81rem;
-              }
-              a:hover {
-                border-bottom: 2px solid #5ed7c6;
-                box-shadow: 0px 2px 1px rgba(156, 175, 195, 0.55);
-                transition: 0.2s;
-                text-shadow: 0px 1.5px 3px rgba(122, 122, 122, 0.55);
+                &:hover {
+                  border-bottom: 2px solid #5ed7c6;
+                  transition: 0.2s;
+                }
               }
             }
             div {
@@ -388,13 +386,13 @@
               display: inline-block;
               width: 3.375rem;
               height: 3.375rem;
-            }
-            .create:hover {
-              cursor: pointer;
-              transition: 0.2s;
-              transform: rotate(360deg);
-              border-radius: 40px;
-              box-shadow: 0px 0px 5px rgba(156, 175, 195, 0.55);
+              &:hover {
+                cursor: pointer;
+                transition: 0.5s ease-out;
+                transform: rotate(360deg);
+                border-radius: 40px;
+                box-shadow: 0px 0px 5px rgba(156, 175, 195, 0.55);
+              }
             }
           }
         }
@@ -420,6 +418,10 @@
             display: flex;
             flex-direction: row;
             width: 551px;
+            &:hover {
+              transform: scale(1.02);
+              transition: 0.5s;
+            }
             .search-box-container {
               width: 551px;
               justify-content: space-between;
@@ -427,7 +429,7 @@
             }
           }
           .search-results-container {
-            display: grid;
+            display: grid !important;
             padding: 0 10rem;
             grid-template-columns: 1fr 1fr 1fr 1fr;
           }
@@ -451,20 +453,21 @@
         align-items: center;
         justify-content: center;
         .trending-gifos-arrow {
-          display: block;
+          display: flex !important;
           margin: 0rem 1.5rem;
-          border: 1px solid #572ee5;
+          border: 1px solid #fff;
           padding: 0.8rem;
           cursor: pointer;
           i {
-            color: #572ee5;
+            color: #fff;
             font-size: 1.2rem;
           }
           &:hover {
-            background-color: #572ee5;
+            background-color: #fff;
             transition: 0.5s;
+            box-shadow: 0px 0px 2px #fff;
             i {
-              color: #ffff;
+              color: #000;
             }
           }
         }
@@ -535,6 +538,7 @@
               margin-top: 5px;
               a:hover {
                 color: #ffff;
+                transition: 0.2s;
               }
             }
           }

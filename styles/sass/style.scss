@@ -208,6 +208,12 @@ html {
         font-family: "Montserrat";
         font-weight: 700;
       }
+      .showBtn:active {
+        background-color: #572ee5;
+        color: #fff;
+        box-shadow: 0px 0px 2px #572ee5;
+        transition: 0.2s;
+      }
       .errorContainer {
         .error-container {
           display: flex;
@@ -376,10 +382,10 @@ html {
             a {
               color: #572ee5;
               font-size: 0.81rem;
-            }
-            a:hover {
-              border-bottom: 2px solid #5ed7c6;
-              transition: 0.2s;
+              &:hover {
+                border-bottom: 2px solid #5ed7c6;
+                transition: 0.2s;
+              }
             }
           }
           div {
@@ -389,13 +395,13 @@ html {
             display: inline-block;
             width: 3.375rem;
             height: 3.375rem;
-          }
-          .create:hover {
-            cursor: pointer;
-            transform: rotate(360deg);
-            border-radius: 40px;
-            box-shadow: 0 0 2px #572ee5;
-            transition: 0.2s;
+            &:hover {
+              cursor: pointer;
+              transform: rotate(360deg);
+              border-radius: 40px;
+              box-shadow: 0 0 2px #572ee5;
+              transition: 0.6s;
+            }
           }
         }
       }

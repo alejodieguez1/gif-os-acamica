@@ -177,6 +177,11 @@ html {
         color: #572ee5;
         font-family: "Montserrat";
         font-weight: 700; }
+      .search-section .search-section-container .search-result-container .showBtn:active {
+        background-color: #572ee5;
+        color: #fff;
+        box-shadow: 0px 0px 2px #572ee5;
+        transition: 0.2s; }
       .search-section .search-section-container .search-result-container .errorContainer .error-container {
         display: flex;
         flex-direction: column;
@@ -306,21 +311,21 @@ html {
         .body-container .header-container .navigation-container .nav-names .names a {
           color: #572ee5;
           font-size: 0.81rem; }
-        .body-container .header-container .navigation-container .nav-names .names a:hover {
-          border-bottom: 2px solid #5ed7c6;
-          transition: 0.2s; }
+          .body-container .header-container .navigation-container .nav-names .names a:hover {
+            border-bottom: 2px solid #5ed7c6;
+            transition: 0.2s; }
       .body-container .header-container .navigation-container .nav-names div {
         display: none; }
       .body-container .header-container .navigation-container .nav-names .create {
         display: inline-block;
         width: 3.375rem;
         height: 3.375rem; }
-      .body-container .header-container .navigation-container .nav-names .create:hover {
-        cursor: pointer;
-        transform: rotate(360deg);
-        border-radius: 40px;
-        box-shadow: 0 0 2px #572ee5;
-        transition: 0.2s; }
+        .body-container .header-container .navigation-container .nav-names .create:hover {
+          cursor: pointer;
+          transform: rotate(360deg);
+          border-radius: 40px;
+          box-shadow: 0 0 2px #572ee5;
+          transition: 0.6s; }
   .body-container .search-section .search-section-container .search-section-title {
     font-size: 2.1875rem;
     line-height: 50px;
@@ -547,7 +552,7 @@ html {
           align-items: center; }
           .darkMode .search-section .search-section-container .search-result-container #search-result-title {
             padding: 3rem 0 0.5rem;
-            color: #572ee5;
+            color: #fff;
             text-transform: capitalize;
             border-top: 1px solid #b4b4b4;
             font-size: 1.5rem; }
@@ -703,23 +708,21 @@ html {
         .darkMode .header-container .navigation-container .nav-names .names a {
           color: #ffffff;
           font-size: 0.81rem; }
-        .darkMode .header-container .navigation-container .nav-names .names a:hover {
-          border-bottom: 2px solid #5ed7c6;
-          box-shadow: 0px 2px 1px rgba(156, 175, 195, 0.55);
-          transition: 0.2s;
-          text-shadow: 0px 1.5px 3px rgba(122, 122, 122, 0.55); }
+          .darkMode .header-container .navigation-container .nav-names .names a:hover {
+            border-bottom: 2px solid #5ed7c6;
+            transition: 0.2s; }
       .darkMode .header-container .navigation-container .nav-names div {
         display: none; }
       .darkMode .header-container .navigation-container .nav-names .create {
         display: inline-block;
         width: 3.375rem;
         height: 3.375rem; }
-      .darkMode .header-container .navigation-container .nav-names .create:hover {
-        cursor: pointer;
-        transition: 0.2s;
-        transform: rotate(360deg);
-        border-radius: 40px;
-        box-shadow: 0px 0px 5px rgba(156, 175, 195, 0.55); }
+        .darkMode .header-container .navigation-container .nav-names .create:hover {
+          cursor: pointer;
+          transition: 0.5s ease-out;
+          transform: rotate(360deg);
+          border-radius: 40px;
+          box-shadow: 0px 0px 5px rgba(156, 175, 195, 0.55); }
   .darkMode .search-section .search-section-container .search-section-title {
     font-size: 2.1875rem;
     line-height: 50px;
@@ -736,12 +739,15 @@ html {
     display: flex;
     flex-direction: row;
     width: 551px; }
+    .darkMode .search-section .search-section-container .search-input-container:hover {
+      transform: scale(1.02);
+      transition: 0.5s; }
     .darkMode .search-section .search-section-container .search-input-container .search-box-container {
       width: 551px;
       justify-content: space-between;
       padding: 0 2rem; }
   .darkMode .search-section .search-section-container .search-results-container {
-    display: grid;
+    display: grid !important;
     padding: 0 10rem;
     grid-template-columns: 1fr 1fr 1fr 1fr; }
   .darkMode .search-section .search-section-container .showBtn:hover {
@@ -756,19 +762,20 @@ html {
     align-items: center;
     justify-content: center; }
     .darkMode #trending-gifos .trending-gifos-arrow {
-      display: block;
+      display: flex !important;
       margin: 0rem 1.5rem;
-      border: 1px solid #572ee5;
+      border: 1px solid #fff;
       padding: 0.8rem;
       cursor: pointer; }
       .darkMode #trending-gifos .trending-gifos-arrow i {
-        color: #572ee5;
+        color: #fff;
         font-size: 1.2rem; }
       .darkMode #trending-gifos .trending-gifos-arrow:hover {
-        background-color: #572ee5;
-        transition: 0.5s; }
+        background-color: #fff;
+        transition: 0.5s;
+        box-shadow: 0px 0px 2px #fff; }
         .darkMode #trending-gifos .trending-gifos-arrow:hover i {
-          color: #ffff; }
+          color: #000; }
     .darkMode #trending-gifos #trending-gifos-container {
       scrollbar-color: #fff transparent;
       scrollbar-width: thin;
@@ -790,6 +797,7 @@ html {
         margin-left: 15px;
         margin-top: 5px; }
         .darkMode .footer-section .footer-container .share-container .share-icons a:hover {
-          color: #ffff; }
+          color: #ffff;
+          transition: 0.2s; }
     .darkMode .footer-section .footer-container .copyright {
       margin-top: 20px; } }
