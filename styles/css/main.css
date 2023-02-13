@@ -308,7 +308,8 @@ html {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      height: 70px; }
+      height: 70px;
+      margin: 0rem; }
       .body-container .header-container .navigation-container .nav-names .names {
         margin: 20px 50px 0px 0px; }
         .body-container .header-container .navigation-container .nav-names .names a {
@@ -715,7 +716,8 @@ html {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      height: 70px; }
+      height: 70px;
+      margin: 0rem; }
       .darkMode .header-container .navigation-container .nav-names .names {
         margin: 20px 50px 0px 0px; }
         .darkMode .header-container .navigation-container .nav-names .names a {
