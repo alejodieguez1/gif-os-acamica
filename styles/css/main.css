@@ -57,7 +57,16 @@ html {
             font-family: "Montserrat", sans-serif;
             font-weight: 800;
             text-decoration: none;
-            color: #ffff; }
+            color: #ffff;
+            text-transform: uppercase; }
+          .body-container .header-container .navigation-container .nav-names .names #toggleDark {
+            display: none; }
+          .body-container .header-container .navigation-container .nav-names .names .labelDark {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-size: 0.81rem;
+            color: #fff;
+            text-transform: uppercase; }
         .body-container .header-container .navigation-container .nav-names .create {
           display: none; }
         .body-container .header-container .navigation-container .nav-names div {
@@ -314,10 +323,17 @@ html {
         margin: 20px 50px 0px 0px; }
         .body-container .header-container .navigation-container .nav-names .names a {
           color: #572ee5;
-          font-size: 0.81rem; }
+          font-size: 0.8rem; }
           .body-container .header-container .navigation-container .nav-names .names a:hover {
             border-bottom: 2px solid #5ed7c6;
             transition: 0.2s; }
+        .body-container .header-container .navigation-container .nav-names .names .labelDark {
+          color: #572ee5;
+          font-size: 0.8rem; }
+          .body-container .header-container .navigation-container .nav-names .names .labelDark:hover {
+            border-bottom: 2px solid #50e3c2;
+            transition: 0.2s;
+            cursor: pointer; }
       .body-container .header-container .navigation-container .nav-names div {
         display: none; }
       .body-container .header-container .navigation-container .nav-names .create {
@@ -472,7 +488,16 @@ html {
               font-family: "Montserrat", sans-serif;
               font-weight: 800;
               text-decoration: none;
-              color: #ffff; }
+              color: #ffff;
+              text-transform: uppercase; }
+            .darkMode .header-container .navigation-container .nav-names .names #toggleDark {
+              display: none; }
+            .darkMode .header-container .navigation-container .nav-names .names .labelDark {
+              font-family: "Montserrat", sans-serif;
+              font-weight: 800;
+              font-size: 0.81rem;
+              color: #fff;
+              text-transform: uppercase; }
           .darkMode .header-container .navigation-container .nav-names .create {
             display: none; }
           .darkMode .header-container .navigation-container .nav-names div {
@@ -726,6 +751,13 @@ html {
           .darkMode .header-container .navigation-container .nav-names .names a:hover {
             border-bottom: 2px solid #5ed7c6;
             transition: 0.2s; }
+        .darkMode .header-container .navigation-container .nav-names .names .labelDark {
+          color: #fff;
+          font-size: 0.8rem; }
+          .darkMode .header-container .navigation-container .nav-names .names .labelDark:hover {
+            border-bottom: 2px solid #50e3c2;
+            transition: 0.2s;
+            cursor: pointer; }
       .darkMode .header-container .navigation-container .nav-names div {
         display: none; }
       .darkMode .header-container .navigation-container .nav-names .create {

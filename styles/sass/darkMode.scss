@@ -64,6 +64,17 @@
               font-weight: 800;
               text-decoration: none;
               color: #ffff;
+              text-transform: uppercase;
+            }
+            #toggleDark {
+              display: none;
+            }
+            .labelDark {
+              font-family: "Montserrat", sans-serif;
+              font-weight: 800;
+              font-size: 0.81rem;
+              color: #fff;
+              text-transform: uppercase;
             }
           }
           .create {
@@ -387,6 +398,15 @@
                 &:hover {
                   border-bottom: 2px solid #5ed7c6;
                   transition: 0.2s;
+                }
+              }
+              .labelDark {
+                color: #fff;
+                font-size: 0.8rem;
+                &:hover {
+                  border-bottom: 2px solid #50e3c2;
+                  transition: 0.2s;
+                  cursor: pointer;
                 }
               }
             }
