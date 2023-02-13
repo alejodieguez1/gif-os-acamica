@@ -1,7 +1,7 @@
 const apiKey = "p8ZMZYpVy2Zl7HlxVPCToc461j1rDepR";
 const url = "https://api.giphy.com/v1";
 const urlTrending = `${url}/gifs/trending?api_key=${apiKey}`;
-const urlCategories = `${url}/gifs/categories?api_key=${apiKey}`;
+const urlCategories = `${url}/gifs/categories?api_key=${apiKey}&limit=5`;
 
 const gifFavImage = "../images/icon-fav.svg";
 const gifDownloadImage = "../images/icon-download.svg";
@@ -103,10 +103,10 @@ function createError(err, container) {
   }
 }
 
-function createSugestions(name, container, itemClass) {
+function createSugestions(a, e, i, o, u, container, itemClass) {
   const item = document.createElement("h2");
   item.className = itemClass;
-  item.innerHTML = `${name},`;
+  item.innerHTML = `${a}, ${e}, ${i}, ${o}, ${u}`;
   container.appendChild(item);
 }
 
@@ -131,13 +131,16 @@ request(urlTrending)
 //Trending categories API Request
 request(urlCategories)
   .then((data) => {
-    for (let i = 0; i <= 4; i++) {
-      createSugestions(
-        data.data[i].name,
-        categoriesContainer,
-        "suggestions-text"
-      );
-    }
+    console.log(data.data);
+    createSugestions(
+      data.data[0].name,
+      data.data[1].name,
+      data.data[2].name,
+      data.data[3].name,
+      data.data[4].name,
+      categoriesContainer,
+      "suggestions-text"
+    );
   })
   .catch((err) => {
     console.error(err);

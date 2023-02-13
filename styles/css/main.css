@@ -202,16 +202,13 @@ html {
         font-family: "Montserrat", sans-serif;
         color: #572ee5; }
       .search-section .search-section-container .trending-text #suggestions {
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        width: 70%; }
+        text-align: center; }
         .search-section .search-section-container .trending-text #suggestions h2 {
           text-transform: capitalize;
           font-size: 1rem;
           font-weight: 400;
           line-height: 1.5rem;
-          margin: 0.5rem 0.2rem 3rem; }
+          margin: 0.5rem 0 3rem; }
 
 .trendingGif-section {
   width: 100%;
@@ -269,10 +266,6 @@ html {
       color: #cdd6e0; }
       .footer-section .footer-container .share-container .share-icons a i {
         margin: 10px; }
-    .footer-section .footer-container .share-container .share-icons a:hover {
-      color: #572ee5;
-      text-shadow: 0px 0px 5px #562ee577;
-      transition: 0.3s; }
   .footer-section .footer-container .copyright {
     text-align: center; }
     .footer-section .footer-container .copyright p {
@@ -316,9 +309,7 @@ html {
           font-size: 0.81rem; }
         .body-container .header-container .navigation-container .nav-names .names a:hover {
           border-bottom: 2px solid #5ed7c6;
-          box-shadow: 0px 2px 1px rgba(156, 175, 195, 0.55);
-          transition: 0.2s;
-          text-shadow: 0px 1.5px 3px rgba(122, 122, 122, 0.55); }
+          transition: 0.2s; }
       .body-container .header-container .navigation-container .nav-names div {
         display: none; }
       .body-container .header-container .navigation-container .nav-names .create {
@@ -327,10 +318,10 @@ html {
         height: 3.375rem; }
       .body-container .header-container .navigation-container .nav-names .create:hover {
         cursor: pointer;
-        transition: 0.2s;
         transform: rotate(360deg);
         border-radius: 40px;
-        box-shadow: 0px 0px 5px rgba(156, 175, 195, 0.55); }
+        box-shadow: 0 0 2px #572ee5;
+        transition: 0.2s; }
   .body-container .search-section .search-section-container .search-section-title {
     font-size: 2.1875rem;
     line-height: 50px;
@@ -362,7 +353,7 @@ html {
     background-color: #572ee5;
     color: #ffff;
     transition: 0.5s;
-    box-shadow: 0px 0px 8px #572ee5; }
+    box-shadow: 0px 0px 2px #572ee5; }
   .body-container .search-section .search-section-container .errorContainer .error-container h1 {
     font-size: 1.3rem; }
   .body-container #trending-gifos {
@@ -381,7 +372,7 @@ html {
       .body-container #trending-gifos .trending-gifos-arrow:hover {
         background-color: #572ee5;
         transition: 0.5s;
-        box-shadow: 0px 0px 8px #572ee5; }
+        box-shadow: 0px 0px 2px #572ee5; }
         .body-container #trending-gifos .trending-gifos-arrow:hover i {
           color: #ffff; }
     .body-container #trending-gifos #trending-gifos-container {
@@ -404,6 +395,9 @@ html {
       .body-container .footer-section .footer-container .share-container .share-icons {
         margin-left: 15px;
         margin-top: 5px; }
+        .body-container .footer-section .footer-container .share-container .share-icons a:hover {
+          color: #572ee5;
+          transition: 0.3s; }
     .body-container .footer-section .footer-container .copyright {
       margin-top: 20px; } }
 
