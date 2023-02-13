@@ -207,12 +207,12 @@ html {
         color: #572ee5;
         font-family: "Montserrat";
         font-weight: 700;
-      }
-      .showBtn:active {
-        background-color: #572ee5;
-        color: #fff;
-        box-shadow: 0px 0px 2px #572ee5;
-        transition: 0.2s;
+        &:active {
+          background-color: #572ee5;
+          color: #fff;
+          box-shadow: 0px 0px 2px #572ee5;
+          transition: 0.3s;
+        }
       }
       .errorContainer {
         .error-container {
@@ -247,6 +247,8 @@ html {
       }
       #suggestions {
         text-align: center;
+        display: flex;
+        justify-content: center;
         h2 {
           text-transform: capitalize;
           font-size: 1rem;

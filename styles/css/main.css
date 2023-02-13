@@ -177,11 +177,11 @@ html {
         color: #572ee5;
         font-family: "Montserrat";
         font-weight: 700; }
-      .search-section .search-section-container .search-result-container .showBtn:active {
-        background-color: #572ee5;
-        color: #fff;
-        box-shadow: 0px 0px 2px #572ee5;
-        transition: 0.2s; }
+        .search-section .search-section-container .search-result-container .showBtn:active {
+          background-color: #572ee5;
+          color: #fff;
+          box-shadow: 0px 0px 2px #572ee5;
+          transition: 0.3s; }
       .search-section .search-section-container .search-result-container .errorContainer .error-container {
         display: flex;
         flex-direction: column;
@@ -206,7 +206,9 @@ html {
         font-family: "Montserrat", sans-serif;
         color: #572ee5; }
       .search-section .search-section-container .trending-text #suggestions {
-        text-align: center; }
+        text-align: center;
+        display: flex;
+        justify-content: center; }
         .search-section .search-section-container .trending-text #suggestions h2 {
           text-transform: capitalize;
           font-size: 1rem;
@@ -585,6 +587,11 @@ html {
             color: #fff;
             font-family: "Montserrat";
             font-weight: 700; }
+            .darkMode .search-section .search-section-container .search-result-container .showBtn:active {
+              background-color: #fff;
+              color: #000;
+              box-shadow: 0px 0px 2px #fff;
+              transition: 0.3s; }
           .darkMode .search-section .search-section-container .search-result-container .errorContainer .error-container {
             display: flex;
             flex-direction: column;
@@ -608,14 +615,16 @@ html {
             font-weight: 700;
             font-family: "Montserrat", sans-serif;
             color: #ffffff; }
-          .darkMode .search-section .search-section-container .trending-text p {
-            align-self: center;
-            width: 60%;
+          .darkMode .search-section .search-section-container .trending-text #suggestions {
             text-align: center;
-            font-size: 0.875rem;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 500;
-            color: #ffffff; }
+            display: flex;
+            justify-content: center; }
+            .darkMode .search-section .search-section-container .trending-text #suggestions h2 {
+              text-transform: capitalize;
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5rem;
+              margin: 0.5rem 0 3rem; }
     .darkMode .trendingGif-section {
       width: 100%;
       height: 430px;
