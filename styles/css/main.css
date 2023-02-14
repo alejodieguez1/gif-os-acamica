@@ -435,14 +435,17 @@ html {
     font-family: "Roboto", sans-serif; }
   .darkMode {
     background-color: #37383c;
+    transition: 0.2s;
     /* Header section */
     /* Search + Trending text section */ }
     .darkMode .header-container {
       width: 100%;
       background: #37383c;
+      transition: 0.2s;
       position: fixed; }
       .darkMode .header-container .top-bar {
         background-color: #000000;
+        transition: 0.2s;
         width: 100%;
         height: 5px; }
       .darkMode .header-container .navigation-container {
