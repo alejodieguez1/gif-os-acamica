@@ -171,6 +171,11 @@ html {
           background-color: #5ed7c700;
           img {
             content: url("../../images/icon-search.svg");
+            transition: 0.5s;
+          }
+          .cancel {
+            content: url("../../images/close.svg");
+            transition: 0.5s;
           }
         }
       }

@@ -20,6 +20,7 @@ const searchText = document.querySelector("#search-result-title");
 
 const userInput = document.querySelector("#txt-search");
 const searchBtn = document.querySelector("#btn-search");
+const searchImg = document.querySelector("#search-icon");
 
 const categoriesContainer = document.querySelector("#suggestions");
 
@@ -225,4 +226,21 @@ left.addEventListener("click", () => {
 });
 right.addEventListener("click", () => {
   gifosContainer.scrollBy(400, 0);
+});
+
+// Search Icon changes when input is not empty
+userInput.addEventListener("input", () => {
+  if (userInput.value != "") {
+    searchImg.classList.add("cancel");
+  } else {
+    searchImg.classList.remove("cancel");
+  }
+});
+
+// Search cancel button functionality
+searchBtn.addEventListener("click", () => {
+  if (searchImg.classList.contains("cancel")) {
+    userInput.value = "";
+    searchImg.classList.remove("cancel");
+  }
 });

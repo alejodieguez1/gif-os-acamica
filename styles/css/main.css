@@ -148,7 +148,11 @@ html {
           border: none;
           background-color: #5ed7c700; }
           .search-section .search-section-container .search-input-container .search-box-container .search-box-btn img {
-            content: url("../../images/icon-search.svg"); }
+            content: url("../../images/icon-search.svg");
+            transition: 0.5s; }
+          .search-section .search-section-container .search-input-container .search-box-container .search-box-btn .cancel {
+            content: url("../../images/close.svg");
+            transition: 0.5s; }
     .search-section .search-section-container .search-result-container {
       display: flex;
       flex-direction: column;
@@ -586,6 +590,8 @@ html {
             background-color: #5ed7c700; }
             .darkMode .search-section .search-section-container .search-input-container .search-box-container .search-box-btn img {
               content: url("../../images/icon-search-modo-noct.svg"); }
+            .darkMode .search-section .search-section-container .search-input-container .search-box-container .search-box-btn .cancel {
+              content: url("../../images/close-modo-noct.svg"); }
       .darkMode .search-section .search-section-container .search-result-container {
         display: flex;
         flex-direction: column;

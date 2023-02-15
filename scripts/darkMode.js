@@ -2,6 +2,7 @@ const darkToggle = document.getElementById("toggleDark");
 const labelDark = document.querySelector(".labelDark");
 const bodyContainer = document.getElementById("bodyContainer");
 const textLogo = document.querySelector("#GIFOS_1");
+const searchIcon = document.getElementById("search-icon");
 const searchInput = document.getElementById("txt-search");
 
 darkToggle.addEventListener("change", () => {
