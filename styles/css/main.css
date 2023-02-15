@@ -147,6 +147,8 @@ html {
           cursor: pointer;
           border: none;
           background-color: #5ed7c700; }
+          .search-section .search-section-container .search-input-container .search-box-container .search-box-btn img {
+            content: url("../../images/icon-search.svg"); }
     .search-section .search-section-container .search-result-container {
       display: flex;
       flex-direction: column;
@@ -339,9 +341,11 @@ html {
       .body-container .header-container .navigation-container .nav-names .create {
         display: inline-block;
         width: 3.375rem;
-        height: 3.375rem; }
+        height: 3.375rem;
+        content: url("../../images/button-crear-gifo.svg"); }
         .body-container .header-container .navigation-container .nav-names .create:hover {
           cursor: pointer;
+          content: url("../../images/CTA-crear-gifo-hover.svg");
           transform: rotate(360deg);
           border-radius: 40px;
           box-shadow: 0 0 2px #572ee5;
@@ -580,6 +584,8 @@ html {
             cursor: pointer;
             border: none;
             background-color: #5ed7c700; }
+            .darkMode .search-section .search-section-container .search-input-container .search-box-container .search-box-btn img {
+              content: url("../../images/icon-search-modo-noct.svg"); }
       .darkMode .search-section .search-section-container .search-result-container {
         display: flex;
         flex-direction: column;
@@ -766,9 +772,11 @@ html {
       .darkMode .header-container .navigation-container .nav-names .create {
         display: inline-block;
         width: 3.375rem;
-        height: 3.375rem; }
+        height: 3.375rem;
+        content: url("../../images/CTA-crear-gifo-modo-noc.svg"); }
         .darkMode .header-container .navigation-container .nav-names .create:hover {
           cursor: pointer;
+          content: url("../../images/CTA-crear-gifo-hover-modo-noc.svg");
           transition: 0.5s ease-out;
           transform: rotate(360deg);
           border-radius: 40px;

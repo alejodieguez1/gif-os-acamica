@@ -173,6 +173,9 @@ html {
             cursor: pointer;
             border: none;
             background-color: #5ed7c700;
+            img {
+              content: url("../../images/icon-search-modo-noct.svg");
+            }
           }
         }
       }
@@ -419,8 +422,10 @@ html {
             display: inline-block;
             width: 3.375rem;
             height: 3.375rem;
+            content: url("../../images/CTA-crear-gifo-modo-noc.svg");
             &:hover {
               cursor: pointer;
+              content: url("../../images/CTA-crear-gifo-hover-modo-noc.svg");
               transition: 0.5s ease-out;
               transform: rotate(360deg);
               border-radius: 40px;
