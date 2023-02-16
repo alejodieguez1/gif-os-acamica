@@ -233,6 +233,11 @@ userInput.addEventListener("keyup", (event) => {
   if (event.keyCode === 13) {
     searchText.innerHTML = userInput.value;
     search(userInput.value);
+    inputContainer.classList.replace(
+      "suggested-search-input",
+      "empty-search-input"
+    );
+    searchImg.classList.remove("cancel");
   }
 });
 
