@@ -127,7 +127,10 @@
             />
           </div>
           <!-- Search Box -->
-          <div class="search-input-container">
+          <div
+            id="input-container"
+            class="search-input-container empty-search-input"
+          >
             <div class="search-box-container">
               <input
                 class="search-box-input"
@@ -139,8 +142,10 @@
                 <img id="search-icon" alt="search-button-img" />
               </button>
             </div>
+            <ul id="search-suggestions-ul" class="search-input-suggestions">
+              <span class="suggestions-bar"></span>
+            </ul>
           </div>
-          <ul class="suggested-search"></ul>
           <div class="search-result-container">
             <h1 id="search-result-title"></h1>
             <div id="search-results-container"></div>
@@ -149,9 +154,9 @@
             </button>
           </div>
           <!-- Trending Text -->
-          <div class="trending-text">
+          <div class="trending-categories-text">
             <h2>Trending:</h2>
-            <div id="suggestions"></div>
+            <div id="trending-categories-suggestions"></div>
           </div>
         </div>
       </main>

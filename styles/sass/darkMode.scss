@@ -117,7 +117,7 @@ html {
   }
   /* Search + Trending text section */
   .search-section {
-    padding-top: 100px;
+    padding-top: 6.25rem;
     .search-section-container {
       display: flex;
       flex-direction: column;
@@ -256,7 +256,7 @@ html {
         }
       }
       /* Trending Text */
-      .trending-text {
+      .trending-categories-text {
         display: flex;
         flex-direction: column;
         h2 {
@@ -266,7 +266,7 @@ html {
           font-family: "Montserrat", sans-serif;
           color: #ffffff;
         }
-        #suggestions {
+        #trending-categories-suggestions {
           text-align: center;
           display: flex;
           justify-content: center;
@@ -487,7 +487,7 @@ html {
             }
           }
         }
-        div#suggestions {
+        div#trending-categories-suggestions {
           h2.suggestions-text {
             width: 100%;
           }

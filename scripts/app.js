@@ -21,8 +21,12 @@ const searchText = document.querySelector("#search-result-title");
 const userInput = document.querySelector("#txt-search");
 const searchBtn = document.querySelector("#btn-search");
 const searchImg = document.querySelector("#search-icon");
+const inputContainer = document.querySelector("#input-container");
+const suggestionsUl = document.querySelector("#search-suggestions-ul");
 
-const categoriesContainer = document.querySelector("#suggestions");
+const categoriesContainer = document.querySelector(
+  "#trending-categories-suggestions"
+);
 
 const left = document.getElementById("trending-left-arrow");
 const right = document.getElementById("trending-right-arrow");
@@ -109,11 +113,24 @@ function createError(err, container) {
   }
 }
 
-function createSugestions(a, e, i, o, u, container, itemClass) {
+function createCategories(a, e, i, o, u, container, itemClass) {
   const item = document.createElement("h2");
   item.className = itemClass;
   item.innerHTML = `${a}, ${e}, ${i}, ${o}, ${u}`;
   container.appendChild(item);
+}
+
+function createSuggestions(name, container) {
+  const listItem = document.createElement("li");
+  listItem.innerHTML = name;
+  container.appendChild(listItem);
+}
+function removeSuggestions(container) {
+  let child = container.lastElementChild;
+  while (child) {
+    container.removeChild(child);
+    child = container.lastElementChild;
+  }
 }
 
 // Trending API Request
@@ -137,7 +154,7 @@ request(urlTrending)
 //Trending categories API Request
 request(urlCategories)
   .then((data) => {
-    createSugestions(
+    createCategories(
       data.data[0].name,
       data.data[1].name,
       data.data[2].name,
@@ -180,7 +197,7 @@ function search() {
   userInput.value = "";
   document.querySelector("#search-results-container").innerHTML = "";
 }
-
+//Show more results function
 function showMore() {
   let elementosArr = document.querySelectorAll(".gif-container");
   let container = searchResultsContainer;
@@ -211,7 +228,7 @@ showMoreBtn.addEventListener("click", () => {
   showMore();
 });
 
-//Search Input Value
+//Search Input Value Event
 userInput.addEventListener("keyup", (event) => {
   if (event.keyCode === 13) {
     searchText.innerHTML = userInput.value;
@@ -219,8 +236,23 @@ userInput.addEventListener("keyup", (event) => {
   }
 });
 
-//Arrows slider functions
+//Search Suggestions Function
+function suggestedSearch() {
+  let urlSuggestions = `${url}/gifs/search/tags?api_key=${apiKey}&q=${userInput.value}`;
+  let container = suggestionsUl;
+  request(urlSuggestions).then((data) => {
+    if (container.children.length <= 5) {
+      for (let i = 0; i <= 4; i++) {
+        createSuggestions(data.data[i].name, container);
+      }
+    } else {
+      removeSuggestions(suggestionsUl);
+    }
+  });
+  console.log(container.children.length);
+}
 
+//Arrows slider functions
 left.addEventListener("click", () => {
   gifosContainer.scrollBy(-400, 0);
 });
@@ -231,8 +263,18 @@ right.addEventListener("click", () => {
 // Search Icon changes when input is not empty
 userInput.addEventListener("input", () => {
   if (userInput.value != "") {
+    suggestedSearch();
+    inputContainer.classList.replace(
+      "empty-search-input",
+      "suggested-search-input"
+    );
     searchImg.classList.add("cancel");
   } else {
+    inputContainer.classList.replace(
+      "suggested-search-input",
+      "empty-search-input"
+    );
+    removeSuggestions(suggestionsUl);
     searchImg.classList.remove("cancel");
   }
 });
