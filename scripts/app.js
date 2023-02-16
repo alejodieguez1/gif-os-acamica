@@ -246,7 +246,7 @@ function suggestedSearch() {
   let urlSuggestions = `${url}/gifs/search/tags?api_key=${apiKey}&q=${userInput.value}`;
   let container = suggestionsUl;
   request(urlSuggestions).then((data) => {
-    if (container.children.length <= 5) {
+    if (container.children.length <= 3) {
       for (let i = 0; i <= 4; i++) {
         createSuggestions(data.data[i].name, container);
       }
@@ -279,7 +279,6 @@ userInput.addEventListener("input", () => {
       "suggested-search-input",
       "empty-search-input"
     );
-    removeSuggestions(suggestionsUl);
     searchImg.classList.remove("cancel");
   }
 });
@@ -289,5 +288,9 @@ searchBtn.addEventListener("click", () => {
   if (searchImg.classList.contains("cancel")) {
     userInput.value = "";
     searchImg.classList.remove("cancel");
+    inputContainer.classList.replace(
+      "suggested-search-input",
+      "empty-search-input"
+    );
   }
 });

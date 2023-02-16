@@ -489,18 +489,19 @@ html {
             height: 190px;
           }
         }
-        .search-input-container {
-          align-self: center;
-          display: flex;
-          flex-direction: row;
+        #input-container {
           width: 551px;
           &:hover {
             transform: scale(1.02);
             transition: 0.5s;
           }
           .search-box-container {
-            width: 551px;
             justify-content: space-between;
+            padding: 0 2rem;
+          }
+        }
+        .suggested-search-input {
+          .search-input-suggestions {
             padding: 0 2rem;
           }
         }

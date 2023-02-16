@@ -148,15 +148,14 @@ html {
         }
       }
       /* Search box */
-      .search-input-container {
+      #input-container {
         align-self: center;
         border-radius: 1.68rem;
         border: 1px solid #ffffff;
         width: 334px;
-        height: 50px;
         overflow: hidden;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         .search-box-container {
           display: flex;
@@ -179,6 +178,39 @@ html {
             .cancel {
               content: url("../../images/close-modo-noct.svg");
             }
+          }
+        }
+      }
+      .empty-search-input {
+        height: 3.1rem;
+        transition: 0.5s;
+        .search-input-suggestions {
+          display: none;
+        }
+      }
+      .suggested-search-input {
+        height: 15rem;
+        transition: 0.5s;
+        .search-box-container {
+          margin-bottom: 0.5rem;
+        }
+        .search-input-suggestions {
+          display: flex;
+          flex-direction: column;
+          margin: 0.2rem 0;
+          padding: 0;
+          .suggestions-bar {
+            align-self: center;
+            width: 290px;
+            height: 1px;
+            opacity: 0.5;
+            background-color: #9cafc3;
+          }
+          li {
+            color: #9cafc3;
+            list-style: none;
+            margin: 0.5rem 0rem 0.5rem 2rem;
+            text-transform: capitalize;
           }
         }
       }
@@ -454,18 +486,19 @@ html {
             height: 190px;
           }
         }
-        .search-input-container {
-          align-self: center;
-          display: flex;
-          flex-direction: row;
+        #input-container {
           width: 551px;
           &:hover {
             transform: scale(1.02);
             transition: 0.5s;
           }
           .search-box-container {
-            width: 551px;
             justify-content: space-between;
+            padding: 0 2rem;
+          }
+        }
+        .suggested-search-input {
+          .search-input-suggestions {
             padding: 0 2rem;
           }
         }
