@@ -13,6 +13,8 @@ html {
     background: #37383c;
     transition: 0.2s;
     position: fixed;
+    height: 5rem;
+    box-shadow: 0 0 5px #00000031;
     .top-bar {
       background-color: #000000;
       transition: 0.2s;
@@ -20,19 +22,16 @@ html {
       height: 5px;
     }
     .navigation-container {
-      padding: 8px 0px 8px;
+      margin: 0.8rem 0;
       .gifos-logo {
-        margin: 22px;
-        width: 3.05rem;
-        height: 3.05rem;
+        margin: 0 1.3rem;
       }
       .hmb-menu {
         display: none;
       }
       /* Hamburguer menu three bars */
       .hmb-label {
-        padding-top: 19px;
-        padding-right: 26px;
+        margin: 1rem;
         float: right;
         cursor: pointer;
         display: flex;
@@ -56,6 +55,7 @@ html {
         display: flex;
         flex-direction: column;
         background-color: #000000;
+        margin-top: 0.6rem;
         .names {
           list-style: none;
           overflow: hidden;
@@ -404,21 +404,17 @@ html {
 @media all and(min-width: 768px) {
   .darkMode {
     .header-container {
+      height: 8rem;
       .navigation-container {
-        padding: 0px;
-        padding-top: 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin: 1.8rem 0;
         .hmb-label {
           display: none;
         }
         .gifos-logo {
-          margin-top: 0px;
-          margin-bottom: 0px;
-          margin-left: 100px;
-          width: 3.693rem;
-          height: 3.693rem;
+          margin: 0 6.25rem;
         }
         .nav-names {
           background-color: rgba(255, 255, 255, 0);
@@ -438,6 +434,7 @@ html {
               &:hover {
                 border-bottom: 2px solid #5ed7c6;
                 transition: 0.2s;
+                cursor: pointer;
               }
             }
             .labelDark {
@@ -471,6 +468,7 @@ html {
       }
     }
     .search-section {
+      padding-top: 12.5rem;
       .search-section-container {
         .search-section-title {
           font-size: 2.1875rem;
