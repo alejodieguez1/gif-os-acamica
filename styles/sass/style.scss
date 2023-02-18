@@ -154,9 +154,9 @@ html {
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       .search-box-container {
         display: flex;
+        margin: 0.8rem 0;
         .search-box-input {
           color: #6b7989;
           font-family: "Roboto", sans-serif;
