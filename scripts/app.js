@@ -243,18 +243,18 @@ userInput.addEventListener("keyup", (event) => {
 
 //Search Suggestions Function
 function suggestedSearch() {
-  let urlSuggestions = `${url}/gifs/search/tags?api_key=${apiKey}&q=${userInput.value}`;
+  let urlSuggestions = `${url}/gifs/search/tags?api_key=${apiKey}&q=${userInput.value}&limit=5`;
   let container = suggestionsUl;
+  let suggestionsArr = [];
   request(urlSuggestions).then((data) => {
-    if (container.children.length <= 3) {
-      for (let i = 0; i <= 4; i++) {
-        createSuggestions(data.data[i].name, container);
-      }
-    } else {
-      removeSuggestions(suggestionsUl);
+    for (let i = 0; i < 5; i++) {
+      suggestionsArr.push(data.data[i].name);
+      createSuggestions(suggestionsArr[i], container);
+    }
+    if (suggestionsArr.length > 5) {
+      removeSuggestions(container);
     }
   });
-  console.log(container.children.length);
 }
 
 //Arrows slider functions
@@ -268,6 +268,7 @@ right.addEventListener("click", () => {
 // Search Icon changes when input is not empty
 userInput.addEventListener("input", () => {
   if (userInput.value != "") {
+    removeSuggestions(suggestionsUl);
     suggestedSearch();
     inputContainer.classList.replace(
       "empty-search-input",
