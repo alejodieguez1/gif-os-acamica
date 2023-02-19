@@ -1,0 +1,266 @@
+.body-container {
+  .trendingGif-section {
+    width: 100%;
+    background-color: #f3f5f8;
+    padding-top: 35px;
+    .trendingGif-container {
+      h2 {
+        font-size: 1.25rem;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: #572ee5;
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 1rem;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 23px;
+      }
+    }
+    #trending-gifos {
+      .trending-gifos-arrow {
+        display: none;
+      }
+      #trending-gifos-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        .gif-container {
+          margin: 1.5rem;
+          min-width: 243px;
+          height: 187px;
+          .gifBtns-container {
+            display: none;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .gifInfo-container {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.darkMode {
+  .trendingGif-section {
+    width: 100%;
+    background-color: #222326;
+    padding-top: 35px;
+    .trendingGif-container {
+      h2 {
+        font-size: 1.25rem;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 1.25rem;
+      }
+      p {
+        color: #ffffff;
+        font-size: 1rem;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 23px;
+      }
+    }
+    #trending-gifos {
+      .trending-gifos-arrow {
+        display: none;
+      }
+      #trending-gifos-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        .gif-container {
+          margin: 1.5rem;
+          min-width: 243px;
+          height: 187px;
+          .gifBtns-container {
+            display: none;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .gifInfo-container {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mediaquerie {
+  .body-container {
+    .trendingGif-section {
+      #trending-gifos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .trending-gifos-arrow {
+          display: block;
+          margin: 0rem 1.5rem;
+          border: 1px solid #572ee5;
+          padding: 0.8rem;
+          transition: 0.3s;
+          cursor: pointer;
+          i {
+            color: #572ee5;
+            font-size: 1.2rem;
+          }
+          &:hover {
+            background-color: #572ee5;
+            transition: 0.3s;
+            box-shadow: 0px 0px 2px #572ee5;
+            i {
+              color: #ffff;
+            }
+          }
+        }
+        #trending-gifos-container {
+          scrollbar-color: #572ee5 transparent;
+          scrollbar-width: thin;
+          max-width: 60%;
+          .gif-container {
+            margin: 0 1.5rem;
+            // &:hover {
+            //   .gifBtns-container,
+            //   .gifInfo-container {
+            //     display: flex;
+            //     position: relative;
+            //     transition: 0.5s;
+            //   }
+            //   .gifBtns-container {
+            //     display: none;
+            //     flex-direction: row;
+            //     justify-content: space-between;
+            //     top: 50px;
+            //     left: 50%;
+            //     max-width: 120px;
+            //     overflow: hidden;
+            //     img {
+            //       width: 32px;
+            //       height: 32px;
+            //     }
+            //   }
+            //   .gifInfo-container {
+            //     bottom: 100px;
+            //     left: 20px;
+            //     color: #fff;
+            //     flex-direction: column;
+            //     text-align: left;
+            //     p,
+            //     h4 {
+            //       margin: 0;
+            //       font-family: "Roboto";
+            //     }
+            //     p {
+            //       font-weight: 400;
+            //     }
+            //     h4 {
+            //       font-weight: 600;
+            //       max-width: 90%;
+            //     }
+            //   }
+            // }
+          }
+        }
+      }
+    }
+  }
+  .darkMode {
+    .trendingGif-section {
+      #trending-gifos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .trending-gifos-arrow {
+          display: flex !important;
+          margin: 0rem 1.5rem;
+          border: 1px solid #fff;
+          padding: 0.8rem;
+          transition: 0.3s;
+          cursor: pointer;
+          i {
+            color: #fff;
+            font-size: 1.2rem;
+          }
+          &:hover {
+            background-color: #fff;
+            transition: 0.3s;
+            box-shadow: 0px 0px 2px #fff;
+            i {
+              color: #000;
+            }
+          }
+        }
+        #trending-gifos-container {
+          scrollbar-color: #fff transparent;
+          scrollbar-width: thin;
+          max-width: 60%;
+          .gif-container {
+            margin: 0 1.5rem;
+            // &:hover {
+            //   .gifBtns-container,
+            //   .gifInfo-container {
+            //     display: flex;
+            //     position: relative;
+            //     transition: 0.5s;
+            //   }
+            //   .gifBtns-container {
+            //     display: none;
+            //     flex-direction: row;
+            //     justify-content: space-between;
+            //     top: 50px;
+            //     left: 50%;
+            //     max-width: 120px;
+            //     overflow: hidden;
+            //     img {
+            //       width: 32px;
+            //       height: 32px;
+            //     }
+            //   }
+            //   .gifInfo-container {
+            //     bottom: 100px;
+            //     left: 20px;
+            //     color: #fff;
+            //     flex-direction: column;
+            //     text-align: left;
+            //     p,
+            //     h4 {
+            //       margin: 0;
+            //       font-family: "Roboto";
+            //     }
+            //     p {
+            //       font-weight: 400;
+            //     }
+            //     h4 {
+            //       font-weight: 600;
+            //       max-width: 90%;
+            //     }
+            //   }
+            // }
+          }
+        }
+      }
+    }
+  }
+}
