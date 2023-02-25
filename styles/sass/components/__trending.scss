@@ -3,6 +3,7 @@
     width: 100%;
     background-color: #f3f5f8;
     padding: 2.5rem 0 4rem;
+    transition: 0.5s;
     .trendingGif-container {
       h2 {
         font-size: 1.25rem;
@@ -57,6 +58,7 @@
     width: 100%;
     background-color: #222326;
     padding: 2.5rem 0 4rem;
+    transition: 0.5s;
     .trendingGif-container {
       h2 {
         font-size: 1.25rem;
@@ -111,7 +113,9 @@
 @include mediaquerie {
   .body-container {
     .trendingGif-section {
-      // margin: 3rem 0;
+      .trendingGif-container {
+        margin: 0 0 3rem;
+      }
       #trending-gifos {
         display: flex;
         align-items: center;
@@ -142,46 +146,48 @@
           max-width: 60%;
           .gif-container {
             margin: 0 1.5rem;
-            // &:hover {
-            //   .gifBtns-container,
-            //   .gifInfo-container {
-            //     display: flex;
-            //     position: relative;
-            //     transition: 0.5s;
-            //   }
-            //   .gifBtns-container {
-            //     display: none;
-            //     flex-direction: row;
-            //     justify-content: space-between;
-            //     top: 50px;
-            //     left: 50%;
-            //     max-width: 120px;
-            //     overflow: hidden;
-            //     img {
-            //       width: 32px;
-            //       height: 32px;
-            //     }
-            //   }
-            //   .gifInfo-container {
-            //     bottom: 100px;
-            //     left: 20px;
-            //     color: #fff;
-            //     flex-direction: column;
-            //     text-align: left;
-            //     p,
-            //     h4 {
-            //       margin: 0;
-            //       font-family: "Roboto";
-            //     }
-            //     p {
-            //       font-weight: 400;
-            //     }
-            //     h4 {
-            //       font-weight: 600;
-            //       max-width: 90%;
-            //     }
-            //   }
-            // }
+            min-width: 335px;
+            height: 290px;
+            &:hover {
+              .gifBtns-container,
+              .gifInfo-container {
+                display: flex;
+                position: relative;
+                transition: 0.5s;
+              }
+              .gifBtns-container {
+                flex-direction: row;
+                justify-content: space-between;
+                top: 50px;
+                left: 50%;
+                max-width: 120px;
+                overflow: hidden;
+                transform: translateY(-320px);
+                img {
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+              .gifInfo-container {
+                bottom: 100px;
+                left: 20px;
+                color: #fff;
+                flex-direction: column;
+                text-align: left;
+                p,
+                h4 {
+                  margin: 0;
+                  font-family: "Roboto";
+                }
+                p {
+                  font-weight: 400;
+                }
+                h4 {
+                  font-weight: 600;
+                  max-width: 90%;
+                }
+              }
+            }
           }
         }
       }
@@ -189,6 +195,9 @@
   }
   .darkMode {
     .trendingGif-section {
+      .trendingGif-container {
+        margin: 0 0 3rem;
+      }
       #trending-gifos {
         display: flex;
         align-items: center;
@@ -219,46 +228,49 @@
           max-width: 60%;
           .gif-container {
             margin: 0 1.5rem;
-            // &:hover {
-            //   .gifBtns-container,
-            //   .gifInfo-container {
-            //     display: flex;
-            //     position: relative;
-            //     transition: 0.5s;
-            //   }
-            //   .gifBtns-container {
-            //     display: none;
-            //     flex-direction: row;
-            //     justify-content: space-between;
-            //     top: 50px;
-            //     left: 50%;
-            //     max-width: 120px;
-            //     overflow: hidden;
-            //     img {
-            //       width: 32px;
-            //       height: 32px;
-            //     }
-            //   }
-            //   .gifInfo-container {
-            //     bottom: 100px;
-            //     left: 20px;
-            //     color: #fff;
-            //     flex-direction: column;
-            //     text-align: left;
-            //     p,
-            //     h4 {
-            //       margin: 0;
-            //       font-family: "Roboto";
-            //     }
-            //     p {
-            //       font-weight: 400;
-            //     }
-            //     h4 {
-            //       font-weight: 600;
-            //       max-width: 90%;
-            //     }
-            //   }
-            // }
+            min-width: 335px;
+            height: 290px;
+            &:hover {
+              .gifBtns-container,
+              .gifInfo-container {
+                display: flex;
+                position: relative;
+                transition: 0.5s;
+              }
+              .gifBtns-container {
+                flex-direction: row;
+                justify-content: space-between;
+                top: 50px;
+                left: 50%;
+                max-width: 120px;
+                overflow: hidden;
+                transform: translateY(-320px);
+                img {
+                  width: 32px;
+                  height: 32px;
+                  cursor: pointer;
+                }
+              }
+              .gifInfo-container {
+                bottom: 100px;
+                left: 20px;
+                color: #fff;
+                flex-direction: column;
+                text-align: left;
+                p,
+                h4 {
+                  margin: 0;
+                  font-family: "Roboto";
+                }
+                p {
+                  font-weight: 400;
+                }
+                h4 {
+                  font-weight: 600;
+                  max-width: 90%;
+                }
+              }
+            }
           }
         }
       }

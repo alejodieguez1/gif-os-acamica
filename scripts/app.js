@@ -52,6 +52,7 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
 
   const gif = document.createElement("img");
   gif.src = src;
+  gif.className = "gif-img";
 
   const gifBtnsContainer = document.createElement("div");
   gifBtnsContainer.className = "gifBtns-container";
@@ -80,8 +81,8 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
   gifInfoContainer.appendChild(gifUser);
   gifInfoContainer.appendChild(gifTit);
 
-  item.appendChild(gifBtnsContainer);
   item.appendChild(gif);
+  item.appendChild(gifBtnsContainer);
   item.appendChild(gifInfoContainer);
   item.id = itemId;
 

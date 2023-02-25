@@ -1,5 +1,6 @@
 .body-container {
   .footer-section {
+    box-shadow: 0px 0px 5px #00000031;
     .footer-container {
       display: flex;
       flex-direction: column;
@@ -40,6 +41,7 @@
 }
 .darkMode {
   .footer-section {
+    box-shadow: 0px 0px 5px #00000031;
     .footer-container {
       display: flex;
       flex-direction: column;
@@ -125,6 +127,8 @@
       flex-direction: column;
       justify-content: space-between;
       height: 8rem;
+      background-color: #37383c;
+      box-shadow: 0px 0px 5px #00000031;
       .footer-container {
         padding: 0px 4.3rem;
         flex-direction: row;
