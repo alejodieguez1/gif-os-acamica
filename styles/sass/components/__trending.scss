@@ -2,7 +2,7 @@
   .trendingGif-section {
     width: 100%;
     background-color: #f3f5f8;
-    padding-top: 35px;
+    padding: 2.5rem 0 4rem;
     .trendingGif-container {
       h2 {
         font-size: 1.25rem;
@@ -56,7 +56,7 @@
   .trendingGif-section {
     width: 100%;
     background-color: #222326;
-    padding-top: 35px;
+    padding: 2.5rem 0 4rem;
     .trendingGif-container {
       h2 {
         font-size: 1.25rem;
@@ -111,6 +111,7 @@
 @include mediaquerie {
   .body-container {
     .trendingGif-section {
+      // margin: 3rem 0;
       #trending-gifos {
         display: flex;
         align-items: center;
