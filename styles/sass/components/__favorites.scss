@@ -1,0 +1,90 @@
+.body-container {
+  .favorites-gifs-section {
+    padding-top: 7.25rem;
+    .favorites-gifs-section-container {
+      .favorites-gifs-title-container {
+        text-align: center;
+        margin: 0 0 6.25rem;
+        h2 {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+          color: #572ee5;
+          font-size: 1.25rem;
+          margin: 0.2rem 0 1rem;
+        }
+      }
+      .favorites-gifs-empty-container {
+        text-align: center;
+        margin-bottom: 8.25rem;
+        h2 {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+          color: #50e3c2;
+          font-size: 1.25rem;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+}
+.darkMode {
+  .favorites-gifs-section {
+    padding-top: 7.25rem;
+    .favorites-gifs-section-container {
+      .favorites-gifs-title-container {
+        text-align: center;
+        margin: 0 0 6.25rem;
+        h2 {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+          color: #fff;
+          font-size: 1.25rem;
+          margin: 0.2rem 0 1rem;
+        }
+      }
+      .favorites-gifs-empty-container {
+        text-align: center;
+        margin-bottom: 8.25rem;
+        h2 {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+          color: #fff;
+          font-size: 1.25rem;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+}
+@include mediaquerie {
+  .body-container {
+    .favorites-gifs-section {
+      padding-top: 12.5rem;
+      .favorites-gifs-section-container {
+        .favorites-gifs-empty-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h2 {
+            max-width: 30%;
+          }
+        }
+      }
+    }
+  }
+  .darkMode {
+    .favorites-gifs-section {
+      padding-top: 12.5rem;
+      .favorites-gifs-section-container {
+        .favorites-gifs-empty-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h2 {
+            max-width: 30%;
+          }
+        }
+      }
+    }
+  }
+}

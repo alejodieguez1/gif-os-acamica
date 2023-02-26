@@ -58,12 +58,11 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
   gifBtnsContainer.className = "gifBtns-container";
 
   const gifFav = document.createElement("img");
+  gifFav.className = "fav-btn";
   const gifDownload = document.createElement("img");
+  gifDownload.className = "download-btn";
   const gifMax = document.createElement("img");
-
-  gifFav.src = gifFavImage;
-  gifDownload.src = gifDownloadImage;
-  gifMax.src = gifMaxImage;
+  gifMax.className = "maxgif-btn";
 
   gifBtnsContainer.appendChild(gifFav);
   gifBtnsContainer.appendChild(gifDownload);

@@ -223,6 +223,7 @@
   .body-container {
     .header-container {
       height: 8rem;
+      z-index: 30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
       .navigation-container {
         display: flex;
         flex-direction: row;
@@ -254,6 +255,9 @@
                 border-bottom: 2px solid #5ed7c6;
                 transition: 0.3s;
               }
+              &:active {
+                color: #9cafc3;
+              }
             }
             .labelDark {
               color: #572ee5;
@@ -263,6 +267,9 @@
                 border-bottom: 2px solid #50e3c2;
                 transition: 0.3s;
                 cursor: pointer;
+              }
+              &:active {
+                color: #9cafc3;
               }
             }
           }
@@ -322,6 +329,9 @@
                 transition: 0.3s;
                 cursor: pointer;
               }
+              &:active {
+                color: #9cafc3;
+              }
             }
             .labelDark {
               color: #fff;
@@ -331,6 +341,9 @@
                 border-bottom: 2px solid #50e3c2;
                 transition: 0.3s;
                 cursor: pointer;
+              }
+              &:active {
+                color: #9cafc3;
               }
             }
           }

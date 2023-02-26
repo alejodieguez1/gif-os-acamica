@@ -444,8 +444,91 @@
         .search-result-container {
           .search-results-container {
             display: grid;
-            padding: 0 10rem;
+            padding: 0 12rem;
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            .gif-container {
+              margin: 1rem 1.5rem;
+              transition: 0.5s;
+              overflow: hidden;
+              &:hover {
+                .gifBtns-container,
+                .gifInfo-container {
+                  display: flex;
+                  position: relative;
+                  transition: 0.5s;
+                  z-index: 10000;
+                }
+                .gifBtns-container {
+                  flex-direction: row;
+                  justify-content: space-between;
+                  top: 50px;
+                  left: 60%;
+                  max-width: 120px;
+                  overflow: hidden;
+                  transform: translateY(-230px);
+                  img {
+                    width: 32px;
+                    height: 32px;
+                  }
+                  .fav-btn {
+                    content: url("../../../images/icon-fav-hover.svg");
+                    opacity: 0.5;
+                    transition: 0.2s;
+                    &:hover {
+                      transition: 0.2s;
+                      opacity: 1;
+                    }
+                  }
+                  .download-btn {
+                    content: url("../../../images/icon-download-hover.svg");
+                    opacity: 0.5;
+                    transition: 0.2s;
+                    &:hover {
+                      transition: 0.2s;
+                      opacity: 1;
+                    }
+                  }
+                  .maxgif-btn {
+                    content: url("../../../images/icon-max-hover.svg");
+                    opacity: 0.5;
+                    transition: 0.2s;
+                    &:hover {
+                      transition: 0.2s;
+                      opacity: 1;
+                    }
+                  }
+                }
+                .gifInfo-container {
+                  bottom: 90px;
+                  left: 20px;
+                  color: #fff;
+                  flex-direction: column;
+                  text-align: left;
+                  p,
+                  h4 {
+                    margin: 0;
+                    font-family: "Roboto";
+                  }
+                  p {
+                    font-weight: 400;
+                  }
+                  h4 {
+                    font-weight: 600;
+                    max-width: 90%;
+                  }
+                }
+              }
+            }
+            .card-hover::after {
+              transition: 0.5s;
+              content: "";
+              background-color: #572ee5;
+              opacity: 0.7;
+              min-width: 331px;
+              height: 340px;
+              display: inline-block;
+              transform: translateY(-300px);
+            }
           }
           .showBtn:hover {
             background-color: #572ee5;
@@ -506,10 +589,95 @@
             padding: 0 2rem;
           }
         }
-        .search-results-container {
-          display: grid !important;
-          padding: 0 10rem;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
+        .search-result-container {
+          .search-results-container {
+            display: grid;
+            padding: 0 12rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            .gif-container {
+              margin: 1rem 1.5rem;
+              transition: 0.5s;
+              overflow: hidden;
+              &:hover {
+                .gifBtns-container,
+                .gifInfo-container {
+                  display: flex;
+                  position: relative;
+                  transition: 0.5s;
+                  z-index: 10000;
+                }
+                .gifBtns-container {
+                  flex-direction: row;
+                  justify-content: space-between;
+                  top: 50px;
+                  left: 60%;
+                  max-width: 120px;
+                  overflow: hidden;
+                  transform: translateY(-230px);
+                  img {
+                    width: 32px;
+                    height: 32px;
+                  }
+                  .fav-btn {
+                    content: url("../../../images/icon-fav-hover.svg");
+                    opacity: 0.5;
+                    transition: 0.2s;
+                    &:hover {
+                      transition: 0.2s;
+                      opacity: 1;
+                    }
+                  }
+                  .download-btn {
+                    content: url("../../../images/icon-download-hover.svg");
+                    opacity: 0.5;
+                    transition: 0.2s;
+                    &:hover {
+                      transition: 0.2s;
+                      opacity: 1;
+                    }
+                  }
+                  .maxgif-btn {
+                    content: url("../../../images/icon-max-hover.svg");
+                    opacity: 0.5;
+                    transition: 0.2s;
+                    &:hover {
+                      transition: 0.2s;
+                      opacity: 1;
+                    }
+                  }
+                }
+                .gifInfo-container {
+                  bottom: 90px;
+                  left: 20px;
+                  color: #fff;
+                  flex-direction: column;
+                  text-align: left;
+                  p,
+                  h4 {
+                    margin: 0;
+                    font-family: "Roboto";
+                  }
+                  p {
+                    font-weight: 400;
+                  }
+                  h4 {
+                    font-weight: 600;
+                    max-width: 90%;
+                  }
+                }
+              }
+            }
+            .card-hover::after {
+              transition: 0.5s;
+              content: "";
+              background-color: #572ee5;
+              opacity: 0.7;
+              min-width: 331px;
+              height: 340px;
+              display: inline-block;
+              transform: translateY(-300px);
+            }
+          }
         }
         .showBtn:hover {
           background-color: #fff;
