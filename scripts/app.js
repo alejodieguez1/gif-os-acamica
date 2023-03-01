@@ -33,6 +33,11 @@ const right = document.getElementById("trending-right-arrow");
 
 const contentContainer = document.querySelector("#bodyContainer");
 
+const favoritesContainer = document.querySelector(
+  ".favorites-gifs-empty-container"
+);
+const favGifs = [];
+
 //API REQUEST FUNCTION
 function request(url) {
   return new Promise((resolve, reject) => {
@@ -92,8 +97,28 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
     item.classList.remove("card-hover");
   });
   container.appendChild(item);
-}
 
+  gifFav.addEventListener("click", () => {
+    let newFavGif = {
+      src: gif.src,
+      id: item.id,
+      username: gifUsername,
+      title: gifTitle,
+    };
+    const isInFavs = (id) => {
+      return favGifs.some((x) => x.id === id);
+    };
+    function addFav() {
+      if (isInFavs(newFavGif.id)) {
+        alert("Ya tienes este GIFO");
+      } else {
+        favGifs.push(newFavGif);
+        localStorage.setItem("favGifs", JSON.stringify(favGifs));
+      }
+    }
+    addFav();
+  });
+}
 // Search Error Creation
 function createError(err, container) {
   if (err.data == undefined) {

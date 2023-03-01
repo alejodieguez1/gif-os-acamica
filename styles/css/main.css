@@ -850,7 +850,8 @@ html {
       background-color: #572ee5;
       color: #ffff;
       transition: 0.5s;
-      box-shadow: 0px 0px 2px #572ee5; }
+      box-shadow: 0px 0px 2px #572ee5;
+      cursor: pointer; }
     .body-container .search-section .search-section-container .search-result-container .errorContainer .error-container h1 {
       font-size: 1.3rem; }
     .body-container .search-section .search-section-container .trending-categories-text #trending-categories-suggestions h2 {
@@ -953,7 +954,8 @@ html {
       background-color: #fff;
       color: #000000;
       transition: 0.5s;
-      box-shadow: 0px 0px 8px #a8a8a8; }
+      box-shadow: 0px 0px 8px #a8a8a8;
+      cursor: pointer; }
     .darkMode .search-section .search-section-container .errorContainer .error-container h1 {
       font-size: 1.3rem; }
     .darkMode .search-section .search-section-container div#trending-categories-suggestions h2.suggestions-text {
