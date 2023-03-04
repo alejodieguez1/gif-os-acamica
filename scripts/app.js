@@ -33,22 +33,8 @@ const right = document.getElementById("trending-right-arrow");
 
 const contentContainer = document.querySelector("#bodyContainer");
 
-const favoritesContainer = document.querySelector(
-  ".favorites-gifs-empty-container"
-);
 const favGifs = [];
-
-//API REQUEST FUNCTION
-function request(url) {
-  return new Promise((resolve, reject) => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((response) => {
-        return resolve(response);
-      })
-      .catch((error) => reject(error));
-  });
-}
+localStorage.setItem("favGIfs", JSON.stringify(favGifs));
 
 //Gif card creation function
 function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
@@ -119,6 +105,18 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
     addFav();
   });
 }
+//API REQUEST FUNCTION
+function request(url) {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((response) => {
+        return resolve(response);
+      })
+      .catch((error) => reject(error));
+  });
+}
+
 // Search Error Creation
 function createError(err, container) {
   if (err.data == undefined) {
@@ -224,24 +222,26 @@ function search() {
 }
 //Show more results function
 function showMore() {
-  let elementosArr = document.querySelectorAll(".gif-container");
-  let container = searchResultsContainer;
+  let elementosArr = document.querySelectorAll(
+    "div#search-results-container > div.gif-container"
+  );
+  let offset = elementosArr.length;
+  offset = offset + elementosArr.length;
   let urlSearch = `${url}/gifs/search?api_key=${apiKey}&q=${sessionStorage.getItem(
     "userInput"
-  )}`;
+  )}&offset=${offset}`;
+
   request(urlSearch)
     .then((data) => {
-      for (let i = 0; i <= 101; i++) {
-        if (elementosArr[i].id !== data.data[i].id) {
-          createItem(
-            data.data[i].images.downsized.url,
-            container,
-            "gif-container",
-            data.data[i].id,
-            data.data[i].username,
-            data.data[i].title
-          );
-        }
+      for (let i = 0; i <= 7; i++) {
+        createItem(
+          data.data[i].images.downsized.url,
+          searchResultsContainer,
+          "gif-container",
+          data.data[i].id,
+          data.data[i].username,
+          data.data[i].title
+        );
       }
     })
     .catch((err) => {
