@@ -1592,16 +1592,16 @@ html {
 
 @media all and (min-width: 768px) {
   .body-container .gif-max {
-    height: 345vh; }
+    height: 150%; }
     .body-container .gif-max .gif-img {
       width: 695px;
       height: 385px; }
     .body-container .gif-max .gifBtns-container {
-      top: 1820px;
+      top: 920px;
       right: 600px; }
     .body-container .gif-max .gifInfo-container {
-      top: 1800px;
+      top: 900px;
       right: 1080px; }
     .body-container .gif-max .gifCancel-container {
-      top: 1280px;
+      top: 380px;
       right: 500px; } }

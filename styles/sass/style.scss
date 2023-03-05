@@ -86,21 +86,21 @@ html {
 @include mediaquerie {
   .body-container {
     .gif-max {
-      height: 345vh;
+      height: 150%;
       .gif-img {
         width: 695px;
         height: 385px;
       }
       .gifBtns-container {
-        top: 1820px;
+        top: 920px;
         right: 600px;
       }
       .gifInfo-container {
-        top: 1800px;
+        top: 900px;
         right: 1080px;
       }
       .gifCancel-container {
-        top: 1280px;
+        top: 380px;
         right: 500px;
       }
     }
