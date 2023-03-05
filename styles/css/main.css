@@ -4,6 +4,60 @@ html {
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif; }
 
+.body-container .gif-max {
+  position: absolute;
+  top: 0%;
+  background: #ffffffe5;
+  height: 1450px;
+  min-width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .body-container .gif-max img {
+    width: 318px;
+    height: 245px;
+    object-fit: cover; }
+  .body-container .gif-max .gifBtns-container {
+    position: absolute;
+    top: 870px;
+    right: 30px;
+    display: flex;
+    align-items: center; }
+    .body-container .gif-max .gifBtns-container .maxgif-btn {
+      display: none; }
+    .body-container .gif-max .gifBtns-container .fav-btn {
+      content: url("../../images/icon-fav-active.svg");
+      width: 20px;
+      height: 18px; }
+    .body-container .gif-max .gifBtns-container .download-btn {
+      content: url("../../images/icon-download.svg"); }
+    .body-container .gif-max .gifBtns-container img {
+      height: 36px;
+      width: 36px;
+      cursor: pointer;
+      margin: 0 5px; }
+  .body-container .gif-max .gifInfo-container {
+    position: absolute;
+    top: 850px;
+    right: 115px; }
+    .body-container .gif-max .gifInfo-container p {
+      margin-bottom: 5px;
+      font-size: 15px; }
+    .body-container .gif-max .gifInfo-container h4 {
+      font-size: 16px;
+      margin-top: 0;
+      max-width: 250px; }
+  .body-container .gif-max .gifCancel-container {
+    position: absolute;
+    top: 570px;
+    right: 40px;
+    cursor: pointer; }
+    .body-container .gif-max .gifCancel-container img {
+      width: 16px;
+      height: 16px; }
+
 .darkMode {
   background-color: #37383c;
   transition: 0.5s; }
@@ -193,7 +247,7 @@ html {
 @media all and (min-width: 768px) {
   .body-container .header-container {
     height: 8rem;
-    z-index: 30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000; }
+    z-index: 100; }
     .body-container .header-container .navigation-container {
       display: flex;
       flex-direction: row;
@@ -527,6 +581,8 @@ html {
           margin: 1.5rem;
           min-width: 243px;
           height: 187px; }
+          .body-container .search-section .search-section-container .search-result-container .search-results-container .gif-container .gifCancel-container {
+            display: none; }
           .body-container .search-section .search-section-container .search-result-container .search-results-container .gif-container .gifBtns-container {
             display: none; }
           .body-container .search-section .search-section-container .search-result-container .search-results-container .gif-container img {
@@ -1076,6 +1132,8 @@ html {
         min-width: 335px;
         height: 290px;
         transition: 0.5s; }
+        .body-container .trendingGif-section #trending-gifos #trending-gifos-container .gif-container .gifCancel-container {
+          display: none; }
         .body-container .trendingGif-section #trending-gifos #trending-gifos-container .gif-container:hover .gifBtns-container,
         .body-container .trendingGif-section #trending-gifos #trending-gifos-container .gif-container:hover .gifInfo-container {
           display: flex;
@@ -1275,7 +1333,7 @@ html {
   padding-top: 7.25rem; }
   .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-title-container {
     text-align: center;
-    margin: 0 0 6.25rem; }
+    margin: 0 0 32px; }
     .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-title-container h2 {
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
@@ -1292,6 +1350,7 @@ html {
       font-size: 1.25rem;
       margin-top: 0.4rem; }
   .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container {
+    display: flex;
     flex-direction: column;
     padding: 0 16px; }
     .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container {
@@ -1306,6 +1365,8 @@ html {
         object-fit: cover; }
       .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container .gifInfo-container {
         display: none; }
+  .darkMode .favorites-gifs-section .favorites-gifs-section-container .hidden {
+    display: none; }
 
 @media all and (min-width: 768px) {
   .body-container .favorites-gifs-section {
@@ -1395,7 +1456,79 @@ html {
       flex-direction: column;
       align-items: center; }
       .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-empty-container h2 {
-        max-width: 30%; } }
+        max-width: 30%; }
+    .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 0 192px; }
+      .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container {
+        margin: 1rem 1.5rem;
+        transition: 0.5s;
+        overflow: hidden; }
+        .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container,
+        .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifInfo-container {
+          display: flex;
+          position: relative;
+          transition: 0.5s;
+          z-index: 10000; }
+        .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container {
+          flex-direction: row;
+          justify-content: space-between;
+          top: 50px;
+          left: 60%;
+          max-width: 120px;
+          overflow: hidden;
+          transform: translateY(-230px); }
+          .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container img {
+            width: 32px;
+            height: 32px; }
+          .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container .fav-btn {
+            content: url("../../../images/icon-fav-hover.svg");
+            opacity: 0.5;
+            transition: 0.2s; }
+            .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container .fav-btn:hover {
+              transition: 0.2s;
+              opacity: 1; }
+          .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container .download-btn {
+            content: url("../../../images/icon-download-hover.svg");
+            opacity: 0.5;
+            transition: 0.2s; }
+            .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container .download-btn:hover {
+              transition: 0.2s;
+              opacity: 1; }
+          .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container .maxgif-btn {
+            content: url("../../../images/icon-max-hover.svg");
+            opacity: 0.5;
+            transition: 0.2s; }
+            .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifBtns-container .maxgif-btn:hover {
+              transition: 0.2s;
+              opacity: 1; }
+        .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifInfo-container {
+          bottom: 90px;
+          left: 20px;
+          color: #fff;
+          flex-direction: column;
+          text-align: left; }
+          .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifInfo-container p,
+          .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifInfo-container h4 {
+            margin: 0;
+            font-family: "Roboto"; }
+          .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifInfo-container p {
+            font-weight: 400; }
+          .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .gif-container:hover .gifInfo-container h4 {
+            font-weight: 600;
+            max-width: 90%; }
+      .darkMode .favorites-gifs-section .favorites-gifs-section-container .favorites-gifs-content-container .card-hover::after {
+        transition: 0.5s;
+        content: "";
+        background-color: #572ee5;
+        opacity: 0.7;
+        min-width: 331px;
+        height: 340px;
+        display: inline-block;
+        transform: translateY(-300px); }
+    .darkMode .favorites-gifs-section .favorites-gifs-section-container .hidden {
+      display: none; } }
 
 .body-container .my-gifs-section {
   padding-top: 7.25rem; }
@@ -1456,3 +1589,19 @@ html {
       align-items: center; }
       .darkMode .my-gifs-section .my-gifs-section-container .my-gifs-empty-container h2 {
         max-width: 30%; } }
+
+@media all and (min-width: 768px) {
+  .body-container .gif-max {
+    height: 345vh; }
+    .body-container .gif-max .gif-img {
+      width: 695px;
+      height: 385px; }
+    .body-container .gif-max .gifBtns-container {
+      top: 1820px;
+      right: 600px; }
+    .body-container .gif-max .gifInfo-container {
+      top: 1800px;
+      right: 1080px; }
+    .body-container .gif-max .gifCancel-container {
+      top: 1280px;
+      right: 500px; } }

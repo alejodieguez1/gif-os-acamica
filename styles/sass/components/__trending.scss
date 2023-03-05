@@ -149,6 +149,9 @@
             min-width: 335px;
             height: 290px;
             transition: 0.5s;
+            .gifCancel-container {
+              display: none;
+            }
             &:hover {
               .gifBtns-container,
               .gifInfo-container {
@@ -228,6 +231,29 @@
             display: inline-block;
             transform: translateY(-381px);
           }
+          // .gif-max {
+          //   position: absolute;
+          //   margin: 1.5rem;
+          //   width: 100%;
+          //   height: 2200px;
+          //   z-index: 100;
+          //   background-color: #fff;
+          //   right: -14%;
+          //   display: flex;
+          //   justify-content: center;
+          //   align-items: center;
+          //   .gifBtns-container {
+          //     display: none;
+          //   }
+          //   img {
+          //     width: 695px;
+          //     height: 385px;
+          //     object-fit: cover;
+          //   }
+          //   .gifInfo-container {
+          //     display: none;
+          //   }
+          // }
         }
       }
     }

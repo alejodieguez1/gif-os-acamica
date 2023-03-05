@@ -59,6 +59,14 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
   gifBtnsContainer.appendChild(gifDownload);
   gifBtnsContainer.appendChild(gifMax);
 
+  const gifCancelContainer = document.createElement("div");
+  gifCancelContainer.className = "gifCancel-container";
+  const gifCancel = document.createElement("img");
+  gifCancel.src = "../images/close.svg";
+  gifCancel.className = "maxcancel-btn";
+
+  gifCancelContainer.appendChild(gifCancel);
+
   const gifInfoContainer = document.createElement("div");
   gifInfoContainer.className = "gifInfo-container";
 
@@ -103,6 +111,16 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
       }
     }
     addFav();
+  });
+
+  gifMax.addEventListener("click", () => {
+    item.classList.toggle("gif-max");
+    item.appendChild(gifCancelContainer);
+    contentContainer.appendChild(item);
+  });
+  gifCancel.addEventListener("click", () => {
+    item.classList.toggle("gif-max");
+    container.appendChild(item);
   });
 }
 //API REQUEST FUNCTION

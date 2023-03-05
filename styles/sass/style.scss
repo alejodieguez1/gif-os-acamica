@@ -4,6 +4,73 @@ html {
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
 }
+.body-container {
+  .gif-max {
+    position: absolute;
+    top: 0%;
+    background: #ffffffe5;
+    height: 1450px;
+    min-width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+      width: 318px;
+      height: 245px;
+      object-fit: cover;
+    }
+    .gifBtns-container {
+      position: absolute;
+      top: 870px;
+      right: 30px;
+      display: flex;
+      align-items: center;
+      .maxgif-btn {
+        display: none;
+      }
+      .fav-btn {
+        content: url("../../images/icon-fav-active.svg");
+        width: 20px;
+        height: 18px;
+      }
+      .download-btn {
+        content: url("../../images/icon-download.svg");
+      }
+      img {
+        height: 36px;
+        width: 36px;
+        cursor: pointer;
+        margin: 0 5px;
+      }
+    }
+    .gifInfo-container {
+      position: absolute;
+      top: 850px;
+      right: 115px;
+      p {
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+      h4 {
+        font-size: 16px;
+        margin-top: 0;
+        max-width: 250px;
+      }
+    }
+    .gifCancel-container {
+      position: absolute;
+      top: 570px;
+      right: 40px;
+      cursor: pointer;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
 .darkMode {
   background-color: #37383c;
   transition: 0.5s;
@@ -15,3 +82,27 @@ html {
 @import "./components/_trending";
 @import "./components/_favorites";
 @import "./components/_mygifs";
+
+@include mediaquerie {
+  .body-container {
+    .gif-max {
+      height: 345vh;
+      .gif-img {
+        width: 695px;
+        height: 385px;
+      }
+      .gifBtns-container {
+        top: 1820px;
+        right: 600px;
+      }
+      .gifInfo-container {
+        top: 1800px;
+        right: 1080px;
+      }
+      .gifCancel-container {
+        top: 1280px;
+        right: 500px;
+      }
+    }
+  }
+}
