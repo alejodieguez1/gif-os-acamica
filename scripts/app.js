@@ -127,12 +127,12 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
     container.appendChild(item);
   });
   if (isTablet == true) {
-    gifMax.addEventListener("touchend", () => {
+    gifMax.addEventListener("click", () => {
       item.classList.toggle("gif-max");
       item.appendChild(gifCancelContainer);
       contentContainer.appendChild(item);
     });
-    gifCancel.addEventListener("touchend", () => {
+    gifCancel.addEventListener("click", () => {
       item.classList.toggle("gif-max");
       container.appendChild(item);
     });
