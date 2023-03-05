@@ -36,6 +36,10 @@ const contentContainer = document.querySelector("#bodyContainer");
 const favGifs = [];
 localStorage.setItem("favGIfs", JSON.stringify(favGifs));
 
+const isTablet = window.matchMedia(
+  "only screen and (max-width: 768px)"
+).matches;
+
 //Gif card creation function
 function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
   const item = document.createElement("div");
@@ -122,6 +126,17 @@ function createItem(src, container, itemClass, itemId, gifUsername, gifTitle) {
     item.classList.toggle("gif-max");
     container.appendChild(item);
   });
+  if (isTablet == true) {
+    gifMax.addEventListener("touchend", () => {
+      item.classList.toggle("gif-max");
+      item.appendChild(gifCancelContainer);
+      contentContainer.appendChild(item);
+    });
+    gifCancel.addEventListener("touchend", () => {
+      item.classList.toggle("gif-max");
+      container.appendChild(item);
+    });
+  }
 }
 //API REQUEST FUNCTION
 function request(url) {
